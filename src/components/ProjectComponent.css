@@ -1,0 +1,41 @@
+.project {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding-top: 70px;
+
+  margin-top: 100px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.project-column {
+  text-align: center;
+  padding-top: 5px;
+}
+
+.project-grid {
+  background: linear-gradient(135deg, #7e868f 0%, #5d6874 100%);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
+  display: grid;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-content: space-evenly;
+  padding-left: 50px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+@media screen and (max-width: 480px) {
+  .project {
+    height: auto;
+  }
+  .project-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

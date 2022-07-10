@@ -20,12 +20,13 @@ function Home() {
               <div className="home-title-item">Web Developer</div>
               <div className="home-title-item">Android Developer</div>
               <div className="home-title-item">UI/UX</div>
+              <div className="home-title-item">IT Assitant</div>
               <div className="home-title-item">Dog Owner</div>
             </div>
           </div>
           <div className="home-desc">
             I am a developer who has an interest in both web and mobile
-            development. Reference my projects to see my skillset.
+            development. I also have experience in IT as I was an IT Assitant.
           </div>
         </div>
       </div>

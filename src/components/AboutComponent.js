@@ -15,12 +15,20 @@ function About() {
         <div className="about-left-wrapper">
           <h2>About Me</h2>
           <hr />
-          <h4>
-            {" "}
-            I am a devloper who is interested in both web development and mobile
-            development. I have recently launched 3 applications in the google
-            play store.
-          </h4>
+          <p>
+            I am a developer interested in both web and mobile development. I
+            have a passion for creating applications that can help benefit my
+            community. I have recently launched three applications on the Google
+            Play store to help with productivity and health that are currently
+            listed in my project section. My overall goal is to create an app
+            that can have a large impact on people or contribute to a
+            large-scale application that a variety of different people use.
+          </p>
+          <p>
+            Additionally, I have IT Experience as I have previously helped set
+            up and troubleshoot both Windows and Mac devices. If you have any
+            issues feel free to reach out to see if I can assist you.
+          </p>
         </div>
       </div>
 

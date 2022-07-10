@@ -40,11 +40,11 @@ const ContactComponent = () => {
           <div className="c-info">
             <div className="c-info-item">
               <img src={Phone} alt="" className="c-icon" />
-              +1 123 456 7890
+              +1 323-807-4832
             </div>
             <div className="c-info-item">
               <img src={email} alt="" className="c-icon" />
-              chill.dev03@gmail.com
+              eachilin@gmail.com
             </div>
             <div className="c-info-item">
               <img src={address} alt="" className="c-icon" />

@@ -1,34 +1,33 @@
 .project {
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  padding-top: 70px;
-
-  margin-top: 100px;
-  margin-bottom: 10px;
-  margin-right: 10px;
-  margin-left: 10px;
-}
-
-.project-column {
-  text-align: center;
-  padding-top: 5px;
+  height: auto;
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-bottom: 5%;
+  padding-top: 50px;
 }
 
 .project-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  justify-content: space-between;
+
   background: linear-gradient(135deg, #7e868f 0%, #5d6874 100%);
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
 
-  display: grid;
-  grid-column-gap: 20px;
-  grid-row-gap: 20px;
-  grid-template-columns: repeat(3, 1fr);
+.project-column {
+  display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: space-evenly;
-  padding-left: 50px;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  flex-direction: column;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 @media screen and (max-width: 480px) {

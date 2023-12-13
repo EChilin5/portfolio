@@ -1,37 +1,36 @@
 import React from "react";
+import naruto from "../image/newsletter-naruto3.png";
 import "./HomeComponent.css";
 
-import naruto from "../image/newsletter-naruto3.png";
-
-function Home() {
+const Home = () => {
   return (
-    <div className="home">
-      <div className="home-left">
-        <div className="home-left-bg"></div>
-        <img src={naruto} alt="character" className="home-left-img"></img>
-      </div>
-
-      <div className="home-right">
-        <div className="home-right-wrapper">
-          <h2 className="home-intro">Hello, My name is</h2>
-          <h1 className="home-name">Edgar Chilin</h1>
-          <div className="home-title">
-            <div className="home-title-wrapper">
-              <div className="home-title-item">Web Developer</div>
-              <div className="home-title-item">Android Developer</div>
-              <div className="home-title-item">UI/UX</div>
-              <div className="home-title-item">IT Assitant</div>
-              <div className="home-title-item">Dog Owner</div>
-            </div>
+    <div>
+      <div className="home-container">
+        <div className="home-container-left">
+          <div className="home-subtitle">Hi my name is</div>
+          <div className="home-subheading">
+            <h2>Edgar Chilin</h2>
+            <h3>I develop web and mobile apps</h3>
           </div>
-          <div className="home-desc">
-            I am a developer who has an interest in both web and mobile
-            development. I also have experience in IT as I was an IT Assitant.
+          <div className="home-subcontent">
+            <p>
+              I specialize in using REACT JS, C#, SQL, and Kotlin to build web
+              and mobile applications.Yes I also specialize in android
+              applications.
+            </p>
           </div>
+          <div className="btn-section">
+            <button>Resume</button>
+            <button>Github</button>
+            <button>LinkedIn</button>
+          </div>
+        </div>
+        <div className="home-container-right">
+          <img src={naruto} alt="temporary naruto" />
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default Home;

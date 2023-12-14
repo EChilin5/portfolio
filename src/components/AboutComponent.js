@@ -41,7 +41,7 @@ const AboutComponent = () => {
           </p>
 
           <div className="about-tech-stack">
-            <p>Technologies I am familar with</p>
+            Technologies I am familar with:
             <ul>
               <div className="about-tech-stack-container">
                 <div className="about-tech-stack-left">

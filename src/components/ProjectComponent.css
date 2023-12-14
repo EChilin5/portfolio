@@ -10,13 +10,12 @@
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   bottom: 0;
   left: 0;
   right: 0;
   justify-content: space-between;
 
-  background: linear-gradient(135deg, #7e868f 0%, #5d6874 100%);
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }

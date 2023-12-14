@@ -26,9 +26,6 @@ function TopNavBar() {
                 <Nav.Link as={HashLink} smooth to="/#contact">
                   Contact
                 </Nav.Link>
-                <Nav.Link href="https://drive.google.com/file/d/16Xlk-MbYOjsX8k9JOqO2iGOKnxRkgvTM/view?usp=sharing">
-                  Resume
-                </Nav.Link>
               </Nav>
             </Navbar.Collapse>
           </Container>

@@ -1,5 +1,6 @@
 import React from "react";
 import naruto from "../image/newsletter-naruto3.png";
+import character from "../image/character.jpg";
 import "./HomeComponent.css";
 
 const Home = () => {
@@ -26,7 +27,7 @@ const Home = () => {
           </div>
         </div>
         <div className="home-container-right">
-          <img src={naruto} alt="temporary naruto" />
+          <img src={character} alt="temporary naruto" />
         </div>
       </div>
     </div>

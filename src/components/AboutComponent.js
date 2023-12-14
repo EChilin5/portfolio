@@ -1,4 +1,5 @@
 import React from "react";
+import naruto from "../image/newsletter-naruto3.png";
 
 import CardComponent from "./CardComponent";
 import reactImage from "../image/react.png";
@@ -15,7 +16,7 @@ const AboutComponent = () => {
     <div>
       <div className="about-container">
         <div className="about-container-right">
-          <img src={reactImage} alt="testing will be replaced" />
+          <img src={naruto} alt="testing will be replaced" />
         </div>
         <div className="about-container-left">
           <h2>About Me</h2>

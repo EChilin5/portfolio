@@ -7,6 +7,10 @@
   margin-bottom: 5%;
   padding-top: 50px;
 }
+.project h2{
+  font-size:  calc(1.5rem + .6vw);
+  color: #b0b3b8;
+}
 
 .project-grid {
   display: grid;

@@ -4,6 +4,7 @@ import Phone from "../image/phone.png";
 import email from "../image/email.png";
 import address from "../image/address.png";
 import emailjs from "@emailjs/browser";
+import ContactForm from "./ContactForm";
 
 const ContactComponent = () => {
   const formRef = useRef();
@@ -53,19 +54,7 @@ const ContactComponent = () => {
           </div>
         </div>
         <div className="c-right">
-          <p className="c-desc">
-            <b>Feel Free to Connect</b> Just send an email regarding any
-            questions or if you want to work on project.
-          </p>
-
-          <form ref={formRef} onSubmit={handleSubmit}>
-            <input type="text" placeholder="Name" name="user_name" />
-            <input type="text" placeholder="Subject" name="user_subject" />
-            <input type="text" placeholder="Email" name="user_email" />
-            <textarea rows="5" placeholder="Message" name="message" />
-            <button>Submit</button>
-            {done && "Thank you"}
-          </form>
+          <ContactForm />
         </div>
       </div>
     </div>

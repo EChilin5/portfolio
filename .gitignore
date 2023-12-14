@@ -24,3 +24,7 @@ yarn-error.log*
 src/.env
 package-lock.json
 package.json
+firebase.json
+.firebase/hosting.YnVpbGQ.cache
+firebase.json
+.firebase/hosting.YnVpbGQ.cache

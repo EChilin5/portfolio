@@ -39,10 +39,10 @@ const ContactComponent = () => {
         <div className="c-left">
           <h1 className="c-title">Contact Me</h1>
           <div className="c-info">
-            <div className="c-info-item">
+            {/* <div className="c-info-item">
               <img src={Phone} alt="" className="c-icon" />
               +1 323-807-4832
-            </div>
+            </div> */}
             <div className="c-info-item">
               <img src={email} alt="" className="c-icon" />
               eachilin@gmail.com

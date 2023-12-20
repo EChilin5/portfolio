@@ -4,6 +4,14 @@ import character from "../image/character.jpg";
 import "./HomeComponent.css";
 
 const Home = () => {
+  let linkedin = "https://www.linkedin.com/in/edgar-c/";
+  let resume =
+    "https://drive.google.com/file/d/1pdKCsL-g1DScjSSdbctdCyoszIxx0gXh/view?usp=sharing";
+  let Github = "https://github.com/EChilin5";
+  const openResume = (url) => {
+    window.open(url, "_blank", "noreferrer");
+  };
+
   return (
     <div>
       <div className="home-container">
@@ -21,9 +29,15 @@ const Home = () => {
             </p>
           </div>
           <div className="btn-section">
-            <button>Resume</button>
-            <button>Github</button>
-            <button>LinkedIn</button>
+            <button role="link" onClick={() => openResume(resume)}>
+              Resume
+            </button>
+            <button role="link" onClick={() => openResume(Github)}>
+              Github
+            </button>
+            <button role="link" onClick={() => openResume(linkedin)}>
+              LinkedIn
+            </button>
           </div>
         </div>
         <div className="home-container-right">

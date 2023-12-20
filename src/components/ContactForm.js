@@ -26,7 +26,7 @@ const ContactForm = () => {
     }
 
     setValidated(true);
-    // submitEmail();
+    submitEmail();
   };
 
   const nameChangeHandler = (event) => {
@@ -64,11 +64,11 @@ const ContactForm = () => {
     try {
       emailjs.send(serviceId, templateKey, test, publicKey).then(
         function (response) {
-          console.log("SUCCESS!", response.status, response.text);
-          console.log(test.message);
+          // console.log("SUCCESS!", response.status, response.text);
+          // console.log(test.message);
         },
         function (error) {
-          console.log("FAILED...", error);
+          // console.log("FAILED...", error);
         }
       );
     } catch (error) {

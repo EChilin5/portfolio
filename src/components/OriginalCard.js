@@ -9,34 +9,37 @@ function OriginalCard(props) {
   };
 
   return (
-    // <Card style={{ width: "18rem" }}>
-    //   <Card.Img variant="top" src={props.image} />
-    //   <Card.Body>
-    //     <Card.Title>{props.title}</Card.Title>
-    //     <Card.Text>{props.description}</Card.Text>
-    //     <Button variant="primary" onClick={() => openInNewTab(props.url)}>
-    //       View Project
-    //     </Button>
-    //   </Card.Body>
-    // </Card>
     <div>
       <div className="card-container">
         <div className="card-container-image">
           <img src={props.image} alt="project" />
         </div>
         <div className="card-container-content">
-          <div className="card-content-tech">
-            <p>REACT JS</p>
-            <p>Bootstrap</p>
-            <p>C#</p>
-          </div>
+          {props.option !== "Android" ? (
+            <div className="card-content-tech">
+              <p>REACT JS</p>
+              <p>Bootstrap</p>
+              <p>C#</p>
+            </div>
+          ) : (
+            <div className="card-content-tech">
+              <p>Android</p>
+              <p>Kotlin</p>
+              <p>Firebase</p>
+            </div>
+          )}
+
           <div className="card-content-title">
             <h3>{props.title}</h3>
           </div>
           <div className="card-content-desc">{props.description}</div>
           <div className="card-content-footer">
-            <button id="btn-left">Github</button>
-            <button id="btn-right">Live</button>
+            <button id="btn-left" onClick={() => openInNewTab(props.gitUrl)}>
+              Github
+            </button>
+            <button id="btn-right" onClick={() => openInNewTab(props.url)}>
+              Live
+            </button>
           </div>
         </div>
       </div>

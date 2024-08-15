@@ -6,7 +6,7 @@ import java from "../image/Java.png";
 import SQL from "../image/SQL.png";
 import reactImage from "../image/react.png";
 import kotlin from "../image/kotlin.png";
-import marker from "../image/marker.jpg";
+import marker from "../image/marker.png";
 
 const AboutComponent = () => {
   return (
@@ -41,8 +41,11 @@ const AboutComponent = () => {
             <span className="dotB"></span>
             <span className="dotC"></span>
             <span className="dotD"></span>
+          
             <span className="squareEraser">Eraser</span>
-
+            <img className="marker" src={marker} alt="marker"/>
+            <img className="marker-two" src={marker} alt="marker"/>
+            <img className="marker-three" src={marker} alt="marker"/>
 
               <div className="about-tech-stack">
                 <SkillCard imagePath={reactImage} />

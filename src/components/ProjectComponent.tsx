@@ -46,7 +46,6 @@ function ProjectComponent() {
 
         <div className="project-column">
           <OriginalCard
-            className="project-column"
             image={appointment}
             title="Appointments"
             description="The frontEnd version of the app still in development"

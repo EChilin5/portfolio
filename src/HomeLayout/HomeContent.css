@@ -1,0 +1,23 @@
+.contact-home {
+  position: relative; /* Make this container the reference point for absolute positioning */
+  width: 100%;
+  height: 100%; /* Adjust these values based on your layout needs */
+
+}
+
+.contact-form-section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2; /* Place this element on top of the background */
+  pointer-events: none; /* Allow clicks to pass through this element */
+}
+
+.contact-form-animation-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1; /* This will be the background element */
+  width: 100%;
+  height: 100%;
+}

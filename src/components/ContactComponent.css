@@ -1,7 +1,8 @@
 .contact {
   padding-top: 5%;
-
-  height: 100vh;
+  background-color: transparent;
+  width: 90vw;
+  /* height: 100vh; */
   position: relative;
 }
 
@@ -30,11 +31,13 @@
 .c-title {
   font-size: 60px;
   width: 80%;
+  color: black;
 }
 
 .c-info-item {
   display: flex;
   align-items: center;
+  color: black;
   margin: 50px 0px;
   font-weight: 300;
   width: 70%;
@@ -63,6 +66,7 @@ input {
   border-bottom: 1px solid black;
   margin: 5px 0px;
   font-size: 15px;
+  pointer-events: all;
 }
 
 textarea {
@@ -70,6 +74,7 @@ textarea {
   border-bottom: 1px solid black;
   margin: 5px 0px;
   font-size: 15px;
+  pointer-events: all;
 }
 button {
   border: none;
@@ -78,6 +83,7 @@ button {
   color: white;
   font-weight: 500;
   cursor: pointer;
+  pointer-events: all;
 }
 
 @media  (max-width: 700px) {

@@ -1,11 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&display=swap');
+
 .about-container{
   display: flex;
   flex-wrap: wrap;
   height: 100vh;
   margin-top: 5%;
-  padding-top: 60px;
+  padding: 1rem;
 
-  padding-bottom: auto;
+  background-color: white;
+  color: black;
 }
 
 .about-container-left{
@@ -38,34 +41,120 @@ color: #b0b3b8;
   filter: brightness(0) invert(1);
 }
 
-.about-tech-stack {
+/* .about-tech-stack {
   margin-left: auto;
   margin-right: auto;
   font-size: 1.2rem;
-  width: 60%;
-  padding: 3%;
+  width: 70%;
   
-}
+  
+} */
 
-.about-tech-stack h3{
+.about-tech-stack-name h3{
   font-size:  calc(1.1rem + .6vw);
-  color: #b0b3b8;
+  text-align: center;
+  color: #00b4d8;
+  font-family: "Fuzzy Bubbles", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  
 }
 
-.about-tech-stack-container{
+.about-tech-stack-container {
+  position: relative;
+   display: flex;
+  align-items: center;
+  justify-content: center; /* Center the content horizontally */
+  flex-direction: column;
+  border: 10px solid grey;
+  width: 80%;
+  padding: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.about-tech-stack {
+  padding: 1rem;
   display: flex;
-  flex-wrap: wrap;
-  
+  flex-direction: row;
+  align-items: center;
+  max-width: 900px; /* Set a maximum width based on the item size */
+  gap: 40px; /* Add spacing between the items */
+}
+
+/* .about-tech-stack > * {
+  flex: 1 1 1; /* Each item takes up roughly 1/3rd of the container
+  box-sizing: border-box; /* Ensures padding/margins are included in the width/height
+} */
+
+.dotA{
+    height: 25px;
+    width: 25px;
+    background-color: green;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    top: 150px;
+    left:20px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
   
 }
 
-.about-tech-stack-left{
-  flex: 1;
+.dotB{
+  height: 25px;
+  width: 25px;
+  background-color: red;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  top: 180px;
+  left:20px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
 }
 
-.about-tech-stack-right{
-  flex:1;
+.dotC{
+  height: 25px;
+  width: 25px;
+  background-color: orange;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  top:210px;
+  left:20px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
 }
+
+.dotD{
+  height: 25px;
+  width: 25px;
+  background-color: blue;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  top: 240px;
+  left:20px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
+}
+.squareEraser{
+  height: 35px;
+  width: 100px;
+  background-color: lightgray;
+  border:3px solid black;
+  border-radius: 5px;
+  display: inline-block;
+  position: absolute;
+  bottom: 0px;
+  right:20px;
+  text-align: center;
+  align-items: center;
+  padding-top: 2px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
+
+}
+
+
+
 
 @media (max-width:700px){
   .about-container{

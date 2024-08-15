@@ -13,6 +13,8 @@ import "./OriginalCard.css";
 }
 
 function OriginalCard(props: CardContent) {
+
+
   const openInNewTab = (url: string) => {
     window.open(url, "_blank", "noopener,noreferrer");
   };

@@ -4,9 +4,9 @@ import Home from "./HomeComponent";
 import ContactComponent from "./ContactComponent";
 
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import ErrorPage from "./ErrorPage";
 import ProjectComponent from "./ProjectComponent";
 import Button from "react-bootstrap/Button";
+import ErrorPage from "./ErrorPage";
 
 function Main() {
   const openResume = () => {

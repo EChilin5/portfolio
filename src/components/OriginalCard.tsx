@@ -3,8 +3,17 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import "./OriginalCard.css";
 
-function OriginalCard(props) {
-  const openInNewTab = (url) => {
+ interface CardContent{
+  image:string;
+  option: string;
+  description: string;
+  gitUrl: string;
+  url: string;
+  title:string;
+}
+
+function OriginalCard(props: CardContent) {
+  const openInNewTab = (url: string) => {
     window.open(url, "_blank", "noopener,noreferrer");
   };
 

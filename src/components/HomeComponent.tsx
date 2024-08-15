@@ -8,7 +8,7 @@ const Home = () => {
   let resume =
     "https://drive.google.com/file/d/1pdKCsL-g1DScjSSdbctdCyoszIxx0gXh/view?usp=sharing";
   let Github = "https://github.com/EChilin5";
-  const openResume = (url) => {
+  const openResume = (url: string) => {
     window.open(url, "_blank", "noreferrer");
   };
 

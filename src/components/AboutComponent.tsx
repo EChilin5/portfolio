@@ -1,14 +1,5 @@
 import React from "react";
 import naruto from "../image/newsletter-naruto3.png";
-
-import CardComponent from "./CardComponent";
-import reactImage from "../image/react.png";
-import css from "../image/CSS.png";
-import firestore from "../image/firestore.png";
-import java from "../image/Java.png";
-import kotlin from "../image/kotlin.png";
-import sql from "../image/SQL.png";
-
 import "./AboutComponent.css";
 
 const AboutComponent = () => {

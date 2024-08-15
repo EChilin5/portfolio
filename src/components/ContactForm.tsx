@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import Button from "react-bootstrap/Button";
+import React, { ChangeEvent, FormEvent, useState } from "react";
 import Form from "react-bootstrap/Form";
 import "./ContactForm.css";
 import emailjs from "@emailjs/browser";
@@ -13,11 +12,11 @@ const ContactForm = () => {
     message: "",
   });
 
-  const publicKey = process.env.REACT_APP_Email_JS_Public_Key;
-  const templateKey = process.env.REACT_APP_Email_JS_Template_Key;
-  const serviceId = process.env.REACT_APP_Email_JS_Service_ID;
+  const publicKey = process.env.REACT_APP_Email_JS_Public_Key || '';
+  const templateKey = process.env.REACT_APP_Email_JS_Template_Key || '';
+  const serviceId = process.env.REACT_APP_Email_JS_Service_ID || '';
 
-  const handleSubmit = (event) => {
+  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const form = event.currentTarget;
     if (form.checkValidity() === false) {
@@ -29,25 +28,25 @@ const ContactForm = () => {
     submitEmail();
   };
 
-  const nameChangeHandler = (event) => {
+  const nameChangeHandler = (event: ChangeEvent<HTMLInputElement>) => {
     setUserEmail((prevState) => {
       return { ...prevState, name: event.target.value };
     });
   };
 
-  const emailChangeHandler = (event) => {
+  const emailChangeHandler = (event: ChangeEvent<HTMLInputElement>) => {
     setUserEmail((prevState) => {
       return { ...prevState, email: event.target.value };
     });
   };
 
-  const subjectChangeHandler = (event) => {
+  const subjectChangeHandler = (event: ChangeEvent<HTMLInputElement>) => {
     setUserEmail((prevState) => {
       return { ...prevState, subject: event.target.value };
     });
   };
 
-  const messageChangeHandler = (event) => {
+  const messageChangeHandler = (event: ChangeEvent<HTMLInputElement>) => {
     setUserEmail((prevState) => {
       return { ...prevState, message: event.target.value };
     });

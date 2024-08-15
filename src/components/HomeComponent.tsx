@@ -1,5 +1,4 @@
 import React from "react";
-import naruto from "../image/newsletter-naruto3.png";
 import character from "../image/character.jpg";
 import "./HomeComponent.css";
 

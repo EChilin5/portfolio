@@ -230,7 +230,7 @@ function BallEffect() {
         width: cw,
         height: ch,
         wireframes: false,
-        background: "white",
+        background: "transparent",
       },
     });
     const mouse = Mouse.create(render.canvas);

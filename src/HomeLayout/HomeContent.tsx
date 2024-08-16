@@ -85,7 +85,7 @@ function HomeContent() {
   }, [entities]);
 
   return (
-    <div>
+    <div className="app-overall">
       <canvas ref={canvasRef} id="animation" />
       <div className="content">
         <Home />

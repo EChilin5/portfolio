@@ -1,3 +1,7 @@
+.app-overall{
+  background-color: #eeee;
+}
+
 .contact-home {
   position: relative; /* Make this container the reference point for absolute positioning */
   width: 100%;
@@ -30,8 +34,8 @@
   flex-shrink: 0;
   position: relative;
   overflow: hidden;
-  background-color: white;
-  color: black;
+  /* background-color: black; */
+  /* color: black; */
 }
 
 .home-wrapper {
@@ -71,12 +75,12 @@
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1;
-  pointer-events: none; /* Ensure canvas doesn't interfere with other elements */
+  /* z-index: -1; */
+  /* pointer-events: none; Ensure canvas doesn't interfere with other elements */
 }
 
 .content {
   position: relative;
-  z-index: 1;
+  /* z-index: 1; */
   /* Any additional styling for your content */
 }

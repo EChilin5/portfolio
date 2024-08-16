@@ -19,7 +19,7 @@ interface LeaderType {
 const Leader = (x: number, y: number): LeaderType => ({
   x,
   y,
-  size: 40,
+  size: 50,
   colour: "blue",
   draw(c: CanvasRenderingContext2D) {
     c.fillStyle = this.colour;
@@ -30,7 +30,7 @@ const Leader = (x: number, y: number): LeaderType => ({
   },
   step(width: number, height: number) {
     if (this.size > 0) {
-      this.size -= 1;
+      this.size -= 2;
     }
   },
 });
@@ -95,7 +95,7 @@ function HomeContent() {
         <div id="project" className="project-content-home">
           <div className="home-cards">
             <div className="home-wrapper">
-              <div>Projects</div>
+              <div className="card-deck-title">Projects</div>
               <div>
                 <CardAnimationDeck />
               </div>

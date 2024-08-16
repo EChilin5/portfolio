@@ -1,9 +1,9 @@
 body{
-  background-color: #18191a;
-  color: white;
+   background-color: #18191a; 
+  color: white; 
   margin-left: 5%;
   margin-right: 5%;
-  font-family:'Lora';
+  /* font-family:'Lora'; */
 }
 
 .home-container {

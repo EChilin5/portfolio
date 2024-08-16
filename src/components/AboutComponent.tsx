@@ -7,31 +7,23 @@ import SQL from "../image/SQL.png";
 import reactImage from "../image/react.png";
 import kotlin from "../image/kotlin.png";
 import marker from "../image/marker.png";
-import edgar from "../image/Edgar.jpeg"
+import edgar from "../image/Edgar.jpeg";
 
 const AboutComponent = () => {
   return (
-    <div className="about-section">        <h2 className="about-title">About Me</h2>
-
-      <div className="about-container">     
-
-       
+    <div className="about-section">
+      {" "}
+      <h2 className="about-title">About Me</h2>
+      <div className="about-container">
         <div className="about-container-right">
-          <img src={naruto} alt="testing will be replaced" />
+          <div className="image-block">
+            <img src={edgar} alt="testing will be replaced" />
+            
+          </div>
+
+          <div className="overlay"></div>
         </div>
         <div className="about-container-left">
-          
-          <p>
-            As a software developer with expertise in mobile and web
-            development, I create applications that solve real-world challenges.
-            My skills include Android development with Kotlin and Firebase, and
-            web development using React JS, C#, and SQL. I’m committed to
-            continuous learning and collaboration, having mentored teams in
-            React and TypeScript, and led QA for generative AI tools. Let’s
-            connect if you need innovative solutions and a collaborative
-            approach to your project
-          </p>
-
           <div className="about-tech-stack-name">
             <div className="about-tech-stack-container">
               <h3>Tech Stack</h3>
@@ -58,6 +50,17 @@ const AboutComponent = () => {
               </div>
             </div>
           </div>
+
+          <p>
+            As a software developer with expertise in mobile and web
+            development, I create applications that solve real-world challenges.
+            My skills include Android development with Kotlin and Firebase, and
+            web development using React JS, C#, and SQL. I’m committed to
+            continuous learning and collaboration, having mentored teams in
+            React and TypeScript, and led QA for generative AI tools. Let’s
+            connect if you need innovative solutions and a collaborative
+            approach to your project
+          </p>
         </div>
       </div>
     </div>

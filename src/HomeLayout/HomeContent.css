@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&display=swap');
+
+body{
+  font-family: "Fuzzy Bubbles", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  background: #eeee;
+}
+
 .app-overall{
   background-color: #eeee;
 }
@@ -42,12 +51,17 @@
   display: inline-flex;
   padding: 100px 24px;
   flex-direction: column;
-  align-items: flex-start;
+ align-items: center ;
   gap: 100px;
-  position: relative;
-  overflow: hidden;
+ 
 }
 
+.card-deck-title{
+  text-align: center;
+  color: rgb(0, 180, 216);
+  font-size: 5rem;
+  text-decoration: underline;
+}
 .home-heading {
   width: 823px;
   color: #fff;

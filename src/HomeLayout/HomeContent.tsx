@@ -5,6 +5,7 @@ import Home from "../components/HomeComponent";
 import ProjectComponent from "../components/ProjectComponent";
 import BallEffect from "../components/AnimationComponents/BallEffect/BallEffect";
 import "./HomeContent.css"
+import CardAnimationDeck from "../components/AnimationComponents/CardAnimation/CardAnimationDeck";
 
 function HomeContent() {
   return (
@@ -14,8 +15,8 @@ function HomeContent() {
       <div id="about">
         <About />
       </div>
-      <div id="project">
-        <ProjectComponent />
+      <div id="project" className="project-content-home">
+        <CardAnimationDeck />
       </div>
       <div  id="contact" className="contact-home">
         <div className="contact-form-section">

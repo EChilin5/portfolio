@@ -1,0 +1,44 @@
+.card-deck-center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    grid-column: 1 / span 12;
+    width: 100%;
+    border-radius: 5px;
+    margin-right: 70rem;
+  }
+  
+  .card-deck-sticky {
+    position: sticky;
+    top: 30px; /* Ensure px is added */
+    z-index: 10; /* Ensure it stays above other content */
+  }
+  
+  #about-capability-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    grid-column: 1 / span 12;
+    width: 100%;
+    border-radius: 5px;
+  }
+  
+  .card {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 10px; /* Ensure px is added */
+  }
+  
+  .card-base,
+  .card-level-1,
+  .card-level-2,
+  .card-level-3 {
+    position: absolute;
+    top: 0;
+    transition: transform ease-in-out 1s;
+  }
+  

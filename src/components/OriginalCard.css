@@ -1,7 +1,7 @@
 .card-container{
     width: 18rem;
-    border: 4px solid white;
     border-radius: 4%;
+    background-color: white;
 }
 
 .card-container:hover{
@@ -20,6 +20,11 @@
 
 .card-container-content{
     padding: 5%;
+    border: 4px solid #212529;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top: none;
+
 }
 
 
@@ -40,16 +45,18 @@
 
 .card-content-title h3{
     font-weight: 600;
+    color: #1f2222;
+
 }
 
 .card-content-desc {
     margin-bottom: 10%;
+    color: #1f2222;
 }
 
 .card-content-footer{
     margin-top: 5%;
     border-top: 2px solid #212529;
-    background-color: rgba(0,0,0,.03);
     display:flex ;
     flex-wrap: wrap;
 }
@@ -57,11 +64,11 @@
 .card-content-footer button{
   margin-top: 4%;
   width: 33%;
-  background-color: transparent;
   border: 1px solid white;
   border-radius: 0.75rem;
   padding: 0.5rem 1rem;
   font-size: 0.8rem;
+  background-color: #212529;
 }
 
 #btn-left{

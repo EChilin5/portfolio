@@ -1,11 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import About from "../components/AboutComponent";
-import ContactComponent from "../components/ContactComponent";
-import Home from "../components/HomeComponent";
-import ProjectComponent from "../components/ProjectComponent";
-import BallEffect from "../components/AnimationComponents/BallEffect/BallEffect";
-import "./HomeContent.css";
-import CardAnimationDeck from "../components/AnimationComponents/CardAnimation/CardAnimationDeck";
+import "./AnimationCanvas.scss"
 
 interface LeaderType {
   x: number;
@@ -35,7 +29,7 @@ const Leader = (x: number, y: number): LeaderType => ({
   },
 });
 
-function HomeContent() {
+const AnimationCanvas: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const [entities, setEntities] = useState<LeaderType[]>([]);
 
@@ -84,35 +78,7 @@ function HomeContent() {
     };
   }, [entities]);
 
-  return (
-    <div>
-      <canvas ref={canvasRef} id="animation" />
-      <div className="content">
-        <Home />
-        <div id="about">
-          <About />
-        </div>
-        <div id="project" className="project-content-home">
-          <div className="home-cards">
-            <div className="home-wrapper">
-              <div>Projects</div>
-              <div>
-                <CardAnimationDeck />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div id="contact" className="contact-home">
-          <div className="contact-form-section">
-            <ContactComponent />
-          </div>
-          <div className="contact-form-animation-bg">
-            <BallEffect />
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
+  return <canvas ref={canvasRef} id="animation" />;
+};
 
-export default HomeContent;
+export default AnimationCanvas;

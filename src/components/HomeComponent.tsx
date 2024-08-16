@@ -22,9 +22,7 @@ const Home = () => {
           </div>
           <div className="home-subcontent">
             <p>
-              I specialize in using REACT JS, C#, SQL, and Kotlin to build web
-              and mobile applications.Yes I also specialize in android
-              applications.
+              I specialize in using the MERN Stack
             </p>
           </div>
           <div className="btn-section">

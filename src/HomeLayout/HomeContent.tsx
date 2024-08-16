@@ -16,7 +16,16 @@ function HomeContent() {
         <About />
       </div>
       <div id="project" className="project-content-home">
-        <CardAnimationDeck />
+      <div className="home-cards">
+      <div className="home-wrapper">
+        <div className="home-title">
+          Projects
+        </div>
+        <div>
+          <CardAnimationDeck />
+        </div>
+      </div>
+    </div>
       </div>
       <div  id="contact" className="contact-home">
         <div className="contact-form-section">

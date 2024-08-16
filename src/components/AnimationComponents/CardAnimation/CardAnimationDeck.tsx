@@ -231,7 +231,7 @@ function CardAnimationDeck() {
           key={0}
           className="card-level-base"
           style={{
-            transform: `translate3d(${zotesCardX}px, 0px, 0px) rotate(${levelbaseZotes}deg)`,
+            transform: `translate3d(${zotesCardX}px, 80px, 0px) rotate(${levelbaseZotes}deg)`,
             transition: `transform 1s ease`,
           }}
         >
@@ -248,7 +248,7 @@ function CardAnimationDeck() {
           key={1}
           className="card-level-1"
           style={{
-            transform: `translate3d(${appointmentCardX}px, 0px, 0px) rotate(${level1Appointments}deg)`,
+            transform: `translate3d(${appointmentCardX}px, 80px, 0px) rotate(${level1Appointments}deg)`,
             transition: `transform 1s ease`,
           }}
         >
@@ -265,7 +265,7 @@ function CardAnimationDeck() {
           key={2}
           className="card-level-2"
           style={{
-            transform: `translate3d(${caloriesCardX}px, 0px, 0px) rotate(${level2Calories}deg)`,
+            transform: `translate3d(${caloriesCardX}px, 80px, 0px) rotate(${level2Calories}deg)`,
             transition: `transform 1s ease`,
           }}
         >
@@ -282,7 +282,7 @@ function CardAnimationDeck() {
           key={3}
           className="card-level-3"
           style={{
-            transform: `translate3d(${tioCardX}px, 0px, 0px) rotate(${level3Tio}deg)`,
+            transform: `translate3d(${tioCardX}px, 80px, 0px) rotate(${level3Tio}deg)`,
             transition: `transform 1s ease`,
           }}
         >

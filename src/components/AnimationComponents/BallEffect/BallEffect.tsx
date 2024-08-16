@@ -40,77 +40,49 @@ function BallEffect() {
     letter: string,
     x: number,
     y: number,
-    scale: number = 1,
+    scale: number = 1
   ): Body => {
     const size = shapeSize * scale;
-    const lineWidth = letter === "T" ? tLineWidth : xLineWidth;
-    if (letter === "T") {
-      const width = size;
+    const lineWidth = letter=== "C" || letter === "T" || letter === "H" || letter === "N" ? tLineWidth : xLineWidth;
+  
+    if (letter === "C") {
       const height = size * 1.4;
-      const horizontalBarThickness = lineWidth;
-      const verticalBarThickness = lineWidth;
-      const horizontal = Bodies.rectangle(
-        x,
-        y - height / 2 + horizontalBarThickness / 2,
-        width,
-        horizontalBarThickness,
-        { render: { fillStyle: letterColor }, isStatic: false },
-      );
-      const vertical = Bodies.rectangle(
-        x,
-        y,
-        verticalBarThickness,
-        height - horizontalBarThickness,
-        { render: { fillStyle: letterColor }, isStatic: false },
-      );
-      return Body.create({
-        parts: [horizontal, vertical],
-        frictionAir: 0.1,
-        friction: 0.1, // Increased friction
-        restitution: 0, // No bouncing
-      });
-    } else if (letter === "X") {
       const thickness = lineWidth;
-      const diagonal1 = Bodies.rectangle(x, y, size * 1.4, thickness, {
-        angle: Math.PI / 4,
+      const arc = Bodies.rectangle(x, y, thickness, height, {
         render: { fillStyle: letterColor },
         isStatic: false,
-      });
-      const diagonal2 = Bodies.rectangle(x, y, size * 1.4, thickness, {
-        angle: -Math.PI / 4,
-        render: { fillStyle: letterColor },
-        isStatic: false,
+        angle: -Math.PI / 2,
       });
       return Body.create({
-        parts: [diagonal1, diagonal2],
+        parts: [arc],
         frictionAir: 0.1,
-        friction: 0.1, // Increased friction
-        restitution: 0, // No bouncing
+        friction: 0.1,
+        restitution: 0,
       });
-    } else if (letter === "A") {
+    } else if (letter === "H") {
       const height = size * 1.4;
       const width = size;
       const thickness = lineWidth;
       const leftLeg = Bodies.rectangle(
         x - width / 2 + thickness / 2,
-        y + height / 4,
+        y,
         thickness,
         height,
-        { render: { fillStyle: letterColor }, isStatic: false },
+        { render: { fillStyle: letterColor }, isStatic: false }
       );
       const rightLeg = Bodies.rectangle(
         x + width / 2 - thickness / 2,
-        y + height / 4,
+        y,
         thickness,
         height,
-        { render: { fillStyle: letterColor }, isStatic: false },
+        { render: { fillStyle: letterColor }, isStatic: false }
       );
       const horizontalBar = Bodies.rectangle(
         x,
-        y - height / 4,
-        width - thickness,
+        y,
+        width,
         thickness,
-        { render: { fillStyle: letterColor }, isStatic: false },
+        { render: { fillStyle: letterColor }, isStatic: false }
       );
       return Body.create({
         parts: [leftLeg, rightLeg, horizontalBar],
@@ -118,34 +90,27 @@ function BallEffect() {
         friction: 0.1,
         restitution: 0,
       });
-    } else if (letter === "B") {
-      const height = size * 1.4;
-      const width = size;
+    } else if (letter === "i") {
+      const height = size;
       const thickness = lineWidth;
-      const verticalBar = Bodies.rectangle(
-        x - width / 2 + thickness / 2,
-        y,
+      const body = Bodies.rectangle(
+        x,
+        y + height / 4,
         thickness,
-        height,
-        { render: { fillStyle: letterColor }, isStatic: false },
+        height * 0.8,
+        { render: { fillStyle: letterColor }, isStatic: false }
       );
-      const topCircle = Bodies.circle(x, y - height / 4, width / 4, {
-        render: { fillStyle: letterColor },
-        isStatic: false,
-      });
-      const bottomCircle = Bodies.circle(x, y + height / 4, width / 4, {
+      const dot = Bodies.circle(x, y - height / 2, thickness / 2, {
         render: { fillStyle: letterColor },
         isStatic: false,
       });
       return Body.create({
-        parts: [verticalBar, topCircle, bottomCircle],
+        parts: [body, dot],
         frictionAir: 0.1,
         friction: 0.1,
         restitution: 0,
-        render: { fillStyle: letterColor },
-        isStatic: false,
       });
-    }else if (letter === "L") {
+    } else if (letter === "L") {
       const width = size;
       const height = size * 1.4;
       const thickness = lineWidth;
@@ -169,10 +134,47 @@ function BallEffect() {
         friction: 0.1,
         restitution: 0,
       });
+    } else if (letter === "N") {
+      const height = size * 1.4;
+      const width = size;
+      const thickness = lineWidth;
+      const leftLeg = Bodies.rectangle(
+        x - width / 2 + thickness / 2,
+        y,
+        thickness,
+        height,
+        { render: { fillStyle: letterColor }, isStatic: false }
+      );
+      const rightLeg = Bodies.rectangle(
+        x + width / 2 - thickness / 2,
+        y,
+        thickness,
+        height,
+        { render: { fillStyle: letterColor }, isStatic: false }
+      );
+      const diagonalBar = Bodies.rectangle(
+        x,
+        y,
+        thickness,
+        height,
+        {
+          render: { fillStyle: letterColor },
+          isStatic: false,
+          angle: Math.atan2(height, width), // Diagonal line
+        }
+      );
+      return Body.create({
+        parts: [leftLeg, rightLeg, diagonalBar],
+        frictionAir: 0.1,
+        friction: 0.1,
+        restitution: 0,
+      });
     }
+  
     // Default return for the TypeScript compiler
     return Bodies.rectangle(x, y, size, size);
   };
+  
   // Function to create letters
   const createLetters = (
     numT: number,
@@ -193,22 +195,22 @@ function BallEffect() {
     for (let i = 0; i < numT; i += 1) {
       const x = initialX + Math.random() * dropWidth - dropWidth / 2;
       const y = initialY + Math.random() * dropHeight - dropHeight / 2;
-      elements.push(createLetter("T", x, y));
+      elements.push(createLetter("C", x, y));
     }
     for (let i = 0; i < numX; i += 1) {
       const x = initialX + Math.random() * dropWidth - dropWidth / 2;
       const y = initialY + Math.random() * dropHeight - dropHeight / 2;
-      elements.push(createLetter("X", x, y));
+      elements.push(createLetter("H", x, y));
     }
     for (let i = 0; i < numA; i += 1) {
       const x = initialX + Math.random() * dropWidth - dropWidth / 2;
       const y = initialY + Math.random() * dropHeight - dropHeight / 2;
-      elements.push(createLetter("A", x, y));
+      elements.push(createLetter("i", x, y));
     }
     for (let i = 0; i < numB; i += 1) {
       const x = initialX + Math.random() * dropWidth - dropWidth / 2;
       const y = initialY + Math.random() * dropHeight - dropHeight / 2;
-      elements.push(createLetter("B", x, y));
+      elements.push(createLetter("N", x, y));
     }
     for (let i = 0; i < numL; i += 1) {
       const x = initialX + Math.random() * dropWidth - dropWidth / 2;

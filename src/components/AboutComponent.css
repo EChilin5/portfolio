@@ -7,7 +7,7 @@
   margin-top: 5%;
   padding: 1rem;
 
-  background-color: white;
+  background-color: #ffffffec;
   color: black;
 }
 
@@ -24,6 +24,8 @@ color: rgb(0, 180, 216);
 .about-container-left p{
   margin-top: 0;
   margin-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 2rem;
   font-size: 1.1rem;
   text-align: left;
     
@@ -31,13 +33,16 @@ color: rgb(0, 180, 216);
 
 .about-container-right{
   flex: 1;
+  position: relative;
 }
 
 .about-container-right img{
+  position: relative;
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 80%;
+  top:150px
   /* filter: brightness(0) invert(1); */
 }
 
@@ -67,6 +72,7 @@ color: rgb(0, 180, 216);
   justify-content: center; /* Center the content horizontally */
   flex-direction: column;
   border: 10px solid grey;
+  background-color: white;
   width: 80%;
   padding: 1rem;
   margin-left: auto;

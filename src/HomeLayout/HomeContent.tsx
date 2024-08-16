@@ -18,7 +18,7 @@ function HomeContent() {
       <div id="project" className="project-content-home">
       <div className="home-cards">
       <div className="home-wrapper">
-        <div className="home-title">
+        <div>
           Projects
         </div>
         <div>

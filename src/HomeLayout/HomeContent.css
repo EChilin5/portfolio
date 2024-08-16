@@ -35,14 +35,32 @@
 }
 
 .home-wrapper {
-  display: flex;
+  display: inline-flex;
+  padding: 100px 24px;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  gap: 100px;
+  position: relative;
+  overflow: hidden;
 }
 
-.home-title{
-  font-size: x-large;
+.home-heading {
+  width: 823px;
+  color: #fff;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; /* 30px */
+  text-transform: uppercase;
+  text-align: left;
+  /* // margin-right: 260px; */
+  left: 2100px;
+  position: absolute;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  transition: transform 0.2s ease;
 
+  margin-bottom: 100px;
 }
 

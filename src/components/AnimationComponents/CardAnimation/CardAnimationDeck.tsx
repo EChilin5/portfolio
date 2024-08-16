@@ -119,9 +119,9 @@ function CardAnimationDeck() {
     } else if (position >= 45 && position < 55) {
       setCardXValuesPercentage(800, 400, -400, -800, screenWidth);
     } else if (position >= 55 && position < 60) {
-      setCardXValuesPercentage(900, 450, -550, -900, screenWidth);
+      setCardXValuesPercentage(900, 550, -550, -900, screenWidth);
     } else if (position >= 60) {
-      setCardXValuesPercentage(7500, 2500, -2500, -7500, screenWidth);
+      setCardXValuesPercentage(9000, 3000, -3000, -9000, screenWidth);
     }
   };
 
@@ -196,7 +196,7 @@ function CardAnimationDeck() {
       } else if (
         isScrollingUp &&
         activeSection !== "decrement" &&
-        scrolled < 45
+        scrolled < 35
       ) {
         if (closeIntervalRef.current) clearInterval(closeIntervalRef.current);
         if (openIntervalRef.current) clearInterval(openIntervalRef.current);
@@ -231,16 +231,16 @@ function CardAnimationDeck() {
           key={0}
           className="card-level-base"
           style={{
-            transform: `translate3d(${zotesCardX}px, 80px, 0px) rotate(${levelbaseZotes}deg)`,
+            transform: `translate3d(${zotesCardX}px, 0px, 0px) rotate(${levelbaseZotes}deg)`,
             transition: `transform 1s ease`,
           }}
         >
           <OriginalCard
-            image={zotes}
-            title="Zotes Shop Demo"
-            description="Sample Ecommerce shop to view and buy items"
-            url="https://play.google.com/store/apps/details?id=com.eachilin.zotes"
-            gitUrl="https://github.com/EChilin5/Zotes_OCR"
+            image={chillcalories}
+            title="Chill Calories"
+            description="Help Users reduce their calories and lose weight"
+            url="https://play.google.com/store/apps/details?id=eachillz.dev.itv&hl=en"
+            gitUrl="https://github.com/EChilin5/iTV"
             option="Android"
           />
         </div>
@@ -248,7 +248,7 @@ function CardAnimationDeck() {
           key={1}
           className="card-level-1"
           style={{
-            transform: `translate3d(${appointmentCardX}px, 80px, 0px) rotate(${level1Appointments}deg)`,
+            transform: `translate3d(${appointmentCardX}px, 0px, 0px) rotate(${level1Appointments}deg)`,
             transition: `transform 1s ease`,
           }}
         >
@@ -265,7 +265,7 @@ function CardAnimationDeck() {
           key={2}
           className="card-level-2"
           style={{
-            transform: `translate3d(${caloriesCardX}px, 80px, 0px) rotate(${level2Calories}deg)`,
+            transform: `translate3d(${caloriesCardX}px, 0px, 0px) rotate(${level2Calories}deg)`,
             transition: `transform 1s ease`,
           }}
         >
@@ -282,7 +282,7 @@ function CardAnimationDeck() {
           key={3}
           className="card-level-3"
           style={{
-            transform: `translate3d(${tioCardX}px, 80px, 0px) rotate(${level3Tio}deg)`,
+            transform: `translate3d(${tioCardX}px, 0px, 0px) rotate(${level3Tio}deg)`,
             transition: `transform 1s ease`,
           }}
         >

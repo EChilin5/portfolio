@@ -12,12 +12,13 @@ import edgar from "../image/Edgar.jpeg";
 const AboutComponent = () => {
   return (
     <div className="about-section">
-      {" "}
-      <h2 className="about-title">About Me</h2>
+
       <div className="about-container">
         <div className="about-container-right">
+        <h2 className="about-title">About Me</h2>
+
           <div className="image-block">
-            <img src={edgar} alt="testing will be replaced" />
+            <img src={naruto} alt="testing will be replaced" />
             
           </div>
 

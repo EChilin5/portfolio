@@ -1,14 +1,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&display=swap');
 
+/* html{
+  scroll-snap-type:y mandatory;
+  scroll-behavior: smooth;
+  overscroll-behavior: contain;
+  scroll-padding-top: 70px;
+
+
+}
+
+section {
+  scroll-snap-align: start;
+  transform: transition ease-in 1s;
+  scroll-snap-stop: always;
+}
+
+@keyframes move {
+  to {
+    /* Move horizontally so that the right edge is aligned against the viewport */
+    /* transform: translateX(calc(-100% + 100vw)); */
+  /* }
+} */
+
+
+ */
+
+/* /////////////////////////////////////////// */
+
 body{
   font-family: "Fuzzy Bubbles", sans-serif;
   font-weight: 700;
   font-style: normal;
-  background: #eeee;
+  /* background: #eeee; */
 }
 
 .app-overall{
-  background-color: #eeee;
+  /* background-color: #eeee; */
 }
 
 .contact-home {
@@ -43,13 +70,14 @@ body{
   flex-shrink: 0;
   position: relative;
   overflow: hidden;
+  margin-right: 50px;
   /* background-color: black; */
   /* color: black; */
 }
 
 .home-wrapper {
   display: inline-flex;
-  padding: 100px 24px;
+  padding: 50px 24px;
   flex-direction: column;
  align-items: center ;
   gap: 100px;
@@ -98,3 +126,5 @@ body{
   /* z-index: 1; */
   /* Any additional styling for your content */
 }
+
+

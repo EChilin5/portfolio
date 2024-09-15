@@ -7,6 +7,7 @@
   align-items: center;
 
   /* background-color: #eeeeee; */
+  margin-top: 30px;
   color: black;
 }
 
@@ -15,8 +16,10 @@
 }
 
 .about-section{
+  margin-top: 20px;
   /* background-color: #eeeeee; */
   height: 100vh;
+  padding-top:40px;
 
 }
 
@@ -32,9 +35,9 @@ margin-left: 60px;
   margin-bottom: 1rem;
   padding-left: 1rem;
   padding-right: 2rem;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   text-align: left;
-  color: white;
+  color: black;
   margin-top: 3rem;
     
 }

@@ -6,30 +6,7 @@ import address from "../image/address.png";
 import ContactForm from "./ContactForm";
 
 const ContactComponent = () => {
-  // const formRef = useRef();
-
-  // const [done, setdone] = useState(false);
-
-  // const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-  //   e.preventDefault();
-  //   console.log("hello");
-  //   emailjs
-  //     .sendForm(
-  //       process.env.Service_KEY || '',
-  //       process.env.Template_Key || '',
-  //       formRef.current || '',
-  //       process.env.Public_Key
-  //     )
-  //     .then(
-  //       (result) => {
-  //         console.log(result.text);
-  //         setdone(true);
-  //       },
-  //       (error) => {
-  //         console.log(error.text);
-  //       }
-  //     );
-  // };
+ 
 
   return (
     <div className="contact">

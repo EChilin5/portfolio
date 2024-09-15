@@ -12,5 +12,11 @@
 .navbar li a {
   display: block;
   padding: 8px;
-  background-color: #dddddd;
+  /* background-color: #dddddd; */
+  background-color: transparent;
+}
+
+.navbar{
+  background-color: transparent;
+  color: white;
 }

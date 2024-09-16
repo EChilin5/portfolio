@@ -7,18 +7,16 @@ import chillcalories from "../../../image/ChillCalories.png";
 import appointment from "../../../image/appoinment.jpg";
 import zotes from "../../../image/zotes.png";
 
-
 function CardAnimationDeck() {
-// new content 
- // will target parent div for framer motion this where it will start detecting the scrolling for the cards
- const cardStartingRef = useRef(null);
- const { scrollYProgress } = useScroll({
-   // which element we will need to observe
-   target: cardStartingRef,
-   // gets the start and end of the window
-   offset: ["start end", "start start"],
- });
-
+  // new content
+  // will target parent div for framer motion this where it will start detecting the scrolling for the cards
+  const cardStartingRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    // which element we will need to observe
+    target: cardStartingRef,
+    // gets the start and end of the window
+    offset: ["start end", "start start"],
+  });
 
   // Refs
   const openIntervalRef = useRef<number | null>(null);
@@ -37,14 +35,13 @@ function CardAnimationDeck() {
   const [appointmentCardX, setAppointmentCardX] = useState(0);
   const [caloriesCardX, setCaloriesCardX] = useState(0);
   const [tioCardX, setTioCardX] = useState(0);
-  
+
   // SET Y LEVELS
   const [cardY, setCardY] = useState(0);
 
   // trigger to rotate the cards
   const [trigger2, setTrigger2] = useState(false);
   const [trigger3, setTrigger3] = useState(false);
- 
 
   // Helper Functions
   const resetCardsPosition = () => {
@@ -59,25 +56,23 @@ function CardAnimationDeck() {
   };
 
   const incrementCardsPosition = (position: number) => {
-    if(position > 3 && position < 6){
-    setBaseZotes(0.2);
-    setLevel1Appointments(0.5);
-    setLevel2Calories(0.7);
-    setLevel3Tio(0.9);
-  }else  if(position >= 6 && position < 9){
-    setBaseZotes(1.5);
-    setLevel1Appointments(2.6);
-    setLevel2Calories(3.8);
-    setLevel3Tio(4.9);
-  }else  if(position >= 9 && position < 12){
-    setBaseZotes(1.2);
-    setLevel1Appointments(6.5);
-    setLevel2Calories(7.7);
-    setLevel3Tio(6.9);
-  }
+    if (position > 3 && position < 6) {
+      setBaseZotes(0.2);
+      setLevel1Appointments(0.5);
+      setLevel2Calories(0.7);
+      setLevel3Tio(0.9);
+    } else if (position >= 6 && position < 9) {
+      setBaseZotes(1.5);
+      setLevel1Appointments(2.6);
+      setLevel2Calories(3.8);
+      setLevel3Tio(4.9);
+    } else if (position >= 9 && position < 12) {
+      setBaseZotes(1.2);
+      setLevel1Appointments(6.5);
+      setLevel2Calories(7.7);
+      setLevel3Tio(6.9);
+    }
   };
-
-
 
   const setCardXValues = (
     base: number,
@@ -95,10 +90,10 @@ function CardAnimationDeck() {
     value1: number,
     value2: number,
     value3: number,
-    value4: number,
+    value4: number
   ) => {
     const percentage1 = value1;
-    const percentage2 = value2
+    const percentage2 = value2;
     const percentage3 = value3;
     const percentage4 = value4;
 
@@ -116,10 +111,8 @@ function CardAnimationDeck() {
       setCardXValuesPercentage(20, 10, -10, -20);
     } else if (position >= 35 && position < 45) {
       setCardXValuesPercentage(30, 20, -20, -30);
-
     } else if (position >= 45 && position < 50) {
       setCardXValuesPercentage(50, 30, -30, -50);
-
     } else if (position >= 60) {
       setCardXValuesPercentage(155, 52, -52, -155);
     }
@@ -160,15 +153,12 @@ function CardAnimationDeck() {
     }
   };
 
-
-
   const handleScroll = useCallback(() => {
     scrollYProgress.on("change", (e) => {
-    
       const scrolled = Math.round(e * 100);
       // console.log(scrolled);
 
-      console.log(scrolled)
+      console.log(scrolled);
       if (scrolled <= 10) {
         if (openIntervalRef.current) {
           clearInterval(openIntervalRef.current);
@@ -179,7 +169,7 @@ function CardAnimationDeck() {
           clearInterval(openIntervalRef.current);
         }
         openIntervalRef.current = window.setInterval(() => {
-          incrementCardsPosition(scrolled)
+          incrementCardsPosition(scrolled);
           setCardLevels(scrolled);
           updateTriggers(scrolled);
           updateRotations(scrolled);
@@ -201,7 +191,6 @@ function CardAnimationDeck() {
 
   // Handle scroll event
 
-
   return (
     <div ref={cardStartingRef} className="card-deck-center">
       <div className="card-deck-content">
@@ -220,6 +209,7 @@ function CardAnimationDeck() {
             url="https://play.google.com/store/apps/details?id=eachillz.dev.itv&hl=en"
             gitUrl="https://github.com/EChilin5/iTV"
             option="Android"
+            trigger={trigger2}
           />
         </div>
         <div
@@ -237,6 +227,7 @@ function CardAnimationDeck() {
             url="https://appointments-7407b.web.app/"
             gitUrl="https://github.com/EChilin5/appointment"
             option="Web"
+            trigger={trigger2}
           />
         </div>
         <div
@@ -254,6 +245,7 @@ function CardAnimationDeck() {
             url="https://play.google.com/store/apps/details?id=eachillz.dev.itv&hl=en"
             gitUrl="https://github.com/EChilin5/iTV"
             option="Android"
+            trigger={trigger2}
           />
         </div>
         <div
@@ -271,6 +263,7 @@ function CardAnimationDeck() {
             url="https://play.google.com/store/apps/details?id=com.eachilin.imagecut&hl=en"
             gitUrl="https://github.com/EChilin5/ImageCut_OCR"
             option="Android"
+            trigger={trigger2}
           />
         </div>
       </div>

@@ -20,11 +20,6 @@ const Home = () => {
             <h2>Edgar Chilin</h2>
             <h3>Develop web and mobile apps</h3>
           </div>
-          <div className="home-subcontent">
-            <p>
-              I specialize in using the MERN Stack
-            </p>
-          </div>
           <div className="btn-section">
             <Framer>
             <button role="link" onClick={() => openResume(resume)}>

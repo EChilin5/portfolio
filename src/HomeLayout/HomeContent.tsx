@@ -1,11 +1,13 @@
 import React, { useEffect, useRef, useState } from "react";
 import About from "../components/AboutComponent";
-import ContactComponent from "../components/ContactComponent";
 import Home from "../components/HomeComponent";
-import ProjectComponent from "../components/ProjectComponent";
-import BallEffect from "../components/AnimationComponents/BallEffect/BallEffect";
+
 import "./HomeContent.css";
 import CardAnimationDeck from "../components/AnimationComponents/CardAnimation/CardAnimationDeck";
+import FluidAnimation from "../components/AnimationComponents/FluidAnimation";
+import Confetti from "./ConfettiTest";
+import ConfettiTest from "./ConfettiTest";
+import ContactComponent from "../components/ContactComponent";
 
 function HomeContent() {
 
@@ -15,11 +17,12 @@ function HomeContent() {
       <div className="content">
         <section>
           <Home />
+          <ConfettiTest/>
         </section>
         <section id="sectionPin">
           <div className="pin-wrap-sticky">
             <div className="pin-wrap">
-              …
+              
               <div id="about">
                 <About />
               </div>{" "}

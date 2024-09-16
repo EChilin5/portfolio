@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef, useCallback } from "react";
+import { useScroll } from "framer-motion";
 import "./CardAnimationDeck.scss";
 import OriginalCard from "../../OriginalCard";
 import tio from "../../../image/tio.png";
@@ -6,34 +7,24 @@ import chillcalories from "../../../image/ChillCalories.png";
 import appointment from "../../../image/appoinment.jpg";
 import zotes from "../../../image/zotes.png";
 
-// Throttle function to limit the frequency of function execution
-const throttle = <T extends unknown[]>(
-  callback: (...args: T) => void,
-  limit: number
-) => {
-  let waiting = false;
-  return (...args: T) => {
-    if (!waiting) {
-      callback(...args);
-      waiting = true;
-      setTimeout(() => {
-        waiting = false;
-      }, limit);
-    }
-  };
-};
 
 function CardAnimationDeck() {
+// new content 
+ // will target parent div for framer motion this where it will start detecting the scrolling for the cards
+ const cardStartingRef = useRef(null);
+ const { scrollYProgress } = useScroll({
+   // which element we will need to observe
+   target: cardStartingRef,
+   // gets the start and end of the window
+   offset: ["start end", "start start"],
+ });
+
+
   // Refs
-  const divRef = useRef<HTMLDivElement>(null);
-  const cardPositionRef = useRef(0);
-  const prevScrollTop = useRef(0);
   const openIntervalRef = useRef<number | null>(null);
-  const closeIntervalRef = useRef<number | null>(null);
 
   // States
   const [isRotate10, setIsRotate10] = useState(false);
-  const [hover, setHover] = useState(false);
 
   // rotate cards from 0 to 10
   const [levelbaseZotes, setBaseZotes] = useState(0);
@@ -46,13 +37,14 @@ function CardAnimationDeck() {
   const [appointmentCardX, setAppointmentCardX] = useState(0);
   const [caloriesCardX, setCaloriesCardX] = useState(0);
   const [tioCardX, setTioCardX] = useState(0);
+  
+  // SET Y LEVELS
+  const [cardY, setCardY] = useState(0);
 
   // trigger to rotate the cards
   const [trigger2, setTrigger2] = useState(false);
   const [trigger3, setTrigger3] = useState(false);
-  const [activeSection, setActiveSection] = useState<
-    "none" | "increment" | "decrement"
-  >("none");
+ 
 
   // Helper Functions
   const resetCardsPosition = () => {
@@ -66,19 +58,26 @@ function CardAnimationDeck() {
     setTioCardX(0);
   };
 
-  const incrementCardsPosition = () => {
-    setBaseZotes((prev) => prev + 0.5);
-    setLevel1Appointments((prev) => prev + 0.6);
-    setLevel2Calories((prev) => prev + 0.8);
-    setLevel3Tio((prev) => prev + 0.9);
+  const incrementCardsPosition = (position: number) => {
+    if(position > 3 && position < 6){
+    setBaseZotes(0.2);
+    setLevel1Appointments(0.5);
+    setLevel2Calories(0.7);
+    setLevel3Tio(0.9);
+  }else  if(position >= 6 && position < 9){
+    setBaseZotes(1.5);
+    setLevel1Appointments(2.6);
+    setLevel2Calories(3.8);
+    setLevel3Tio(4.9);
+  }else  if(position >= 9 && position < 12){
+    setBaseZotes(1.2);
+    setLevel1Appointments(6.5);
+    setLevel2Calories(7.7);
+    setLevel3Tio(6.9);
+  }
   };
 
-  const decrementCardValues = () => {
-    setBaseZotes((prev) => prev - 0.5);
-    setLevel1Appointments((prev) => prev - 0.6);
-    setLevel2Calories((prev) => prev - 0.8);
-    setLevel3Tio((prev) => prev - 0.9);
-  };
+
 
   const setCardXValues = (
     base: number,
@@ -97,51 +96,55 @@ function CardAnimationDeck() {
     value2: number,
     value3: number,
     value4: number,
-    screenWidth: number
   ) => {
-    const percentage1 = (value1 / screenWidth) * 100;
-    const percentage2 = (value2 / screenWidth) * 100;
-    const percentage3 = (value3 / screenWidth) * 100;
-    const percentage4 = (value4 / screenWidth) * 100;
+    const percentage1 = value1;
+    const percentage2 = value2
+    const percentage3 = value3;
+    const percentage4 = value4;
 
     setCardXValues(percentage1, percentage2, percentage3, percentage4);
   };
 
-  const setCardLevels = (position: number, screenWidth: number) => {
+  const setCardLevels = (position: number) => {
     if (position > 25) {
       setBaseZotes(10);
       setLevel1Appointments(10);
       setLevel2Calories(10);
       setLevel3Tio(10);
     }
-    if (position >= 25 && position < 45) {
-      setCardXValuesPercentage(40, 25, -25, 40, screenWidth);
-    } else if (position >= 45 && position < 55) {
-      setCardXValuesPercentage(800, 400, -400, -800, screenWidth);
-    } else if (position >= 55 && position < 60) {
-      setCardXValuesPercentage(900, 550, -550, -900, screenWidth);
+    if (position >= 25 && position < 35) {
+      setCardXValuesPercentage(20, 10, -10, -20);
+    } else if (position >= 35 && position < 45) {
+      setCardXValuesPercentage(30, 20, -20, -30);
+
+    } else if (position >= 45 && position < 50) {
+      setCardXValuesPercentage(50, 30, -30, -50);
+
     } else if (position >= 60) {
-      setCardXValuesPercentage(9000, 3000, -3000, -9000, screenWidth);
+      setCardXValuesPercentage(155, 52, -52, -155);
     }
   };
 
-  const updateCardsPosition = useCallback(
-    (position: number) => {
-      const screenWidth = window.innerWidth;
-      if (position <= 10) {
-        setIsRotate10(false);
-        resetCardsPosition();
-      } else if (position > 10 && position <= 25) {
-        isRotate10 ? decrementCardValues() : incrementCardsPosition();
-        setHover(false);
-      } else if (position > 25) {
-        setHover(true);
-        setIsRotate10(true);
-        setCardLevels(position, screenWidth);
-      }
-    },
-    [isRotate10]
-  );
+  // const updateYPosition = (position:number)=>{
+  //   if(position < 20){
+  //     setCardY(0);
+  //   }else if(position>= 20 && position < 30){
+  //     setCardY(10);
+  //   }else if(position>= 30 && position < 40){
+  //     setCardY(20);
+  //   }else if(position>= 40 && position < 50){
+  //     setCardY(30);
+  //   }else if(position>= 50 && position < 60){
+  //     setCardY(40);
+  //   }else if(position>= 60 && position < 70){
+  //     setCardY(50);
+  //   }else if(position>= 70 && position < 80){
+  //     setCardY(60);
+  //   }else if(position>= 80 && position < 100){
+  //     setCardY(70);
+  //   }
+
+  // }
 
   const updateTriggers = (position: number) => {
     setTrigger3(position > 66);
@@ -157,81 +160,56 @@ function CardAnimationDeck() {
     }
   };
 
-  const updateScreenPixels = useCallback(
-    (isIncreasing: boolean) => {
-      let newValue = cardPositionRef.current;
-      if (isIncreasing) {
-        newValue = Math.min(newValue + 3, 100);
-      } else {
-        newValue = Math.max(newValue - 3, 0);
-      }
-      cardPositionRef.current = newValue;
-      updateCardsPosition(newValue);
-      updateTriggers(newValue);
-      updateRotations(newValue);
-    },
-    [updateCardsPosition, updateTriggers, updateRotations]
-  );
+
 
   const handleScroll = useCallback(() => {
-    const scrollTop = window.scrollY;
-    const docHeight =
-      document.documentElement.scrollHeight - window.innerHeight;
-    const scrolled = (scrollTop / docHeight) * 100;
-    const isScrollingDown = scrollTop > prevScrollTop.current;
-    const isScrollingUp = scrollTop < prevScrollTop.current;
-    prevScrollTop.current = scrollTop;
+    scrollYProgress.on("change", (e) => {
+    
+      const scrolled = Math.round(e * 100);
+      // console.log(scrolled);
 
-    if (scrolled <= 10) resetCardsPosition();
-
-    if (scrolled > 30) {
-      if (isScrollingDown && activeSection !== "increment") {
-        if (openIntervalRef.current) clearInterval(openIntervalRef.current);
-        if (closeIntervalRef.current) clearInterval(closeIntervalRef.current);
-        openIntervalRef.current = window.setInterval(
-          () => updateScreenPixels(true),
-          100
-        );
-        setActiveSection("increment");
-      } else if (
-        isScrollingUp &&
-        activeSection !== "decrement" &&
-        scrolled < 35
-      ) {
-        if (closeIntervalRef.current) clearInterval(closeIntervalRef.current);
-        if (openIntervalRef.current) clearInterval(openIntervalRef.current);
-        closeIntervalRef.current = window.setInterval(
-          () => updateScreenPixels(false),
-          100
-        );
-        setActiveSection("decrement");
+      console.log(scrolled)
+      if (scrolled <= 10) {
+        if (openIntervalRef.current) {
+          clearInterval(openIntervalRef.current);
+        }
+        resetCardsPosition();
+      } else {
+        if (openIntervalRef.current) {
+          clearInterval(openIntervalRef.current);
+        }
+        openIntervalRef.current = window.setInterval(() => {
+          incrementCardsPosition(scrolled)
+          setCardLevels(scrolled);
+          updateTriggers(scrolled);
+          updateRotations(scrolled);
+          // updateYPosition(scrolled);
+        }, 30);
       }
-    }
-  }, [activeSection, updateScreenPixels]);
+    });
+  }, []);
 
   // Cleanup intervals on unmount
   useEffect(() => {
+    handleScroll();
     return () => {
-      if (openIntervalRef.current) clearInterval(openIntervalRef.current);
-      if (closeIntervalRef.current) clearInterval(closeIntervalRef.current);
+      if (openIntervalRef.current) {
+        clearInterval(openIntervalRef.current);
+      }
     };
-  }, []);
-
-  // Handle scroll event
-  useEffect(() => {
-    const throttledScroll = throttle(handleScroll, 80);
-    window.addEventListener("scroll", throttledScroll);
-    return () => window.removeEventListener("scroll", throttledScroll);
   }, [handleScroll]);
 
+  // Handle scroll event
+
+
   return (
-    <div ref={divRef} className="card-deck-center">
+    <div ref={cardStartingRef} className="card-deck-center">
       <div className="card-deck-content">
         <div
           key={0}
           className="card-level-base"
           style={{
-            transform: `translate3d(${zotesCardX}px, 0px, 0px) rotate(${levelbaseZotes}deg)`,
+            transform: `translate3d(${zotesCardX}%, ${cardY}%, 0px) rotate(${levelbaseZotes}deg)`,
             transition: `transform 1s ease`,
           }}
         >
@@ -248,7 +226,7 @@ function CardAnimationDeck() {
           key={1}
           className="card-level-1"
           style={{
-            transform: `translate3d(${appointmentCardX}px, 0px, 0px) rotate(${level1Appointments}deg)`,
+            transform: `translate3d(${appointmentCardX}%, ${cardY}%, 0px) rotate(${level1Appointments}deg)`,
             transition: `transform 1s ease`,
           }}
         >
@@ -265,7 +243,7 @@ function CardAnimationDeck() {
           key={2}
           className="card-level-2"
           style={{
-            transform: `translate3d(${caloriesCardX}px, 0px, 0px) rotate(${level2Calories}deg)`,
+            transform: `translate3d(${caloriesCardX}%, ${cardY}%, 0px) rotate(${level2Calories}deg)`,
             transition: `transform 1s ease`,
           }}
         >
@@ -282,7 +260,7 @@ function CardAnimationDeck() {
           key={3}
           className="card-level-3"
           style={{
-            transform: `translate3d(${tioCardX}px, 0px, 0px) rotate(${level3Tio}deg)`,
+            transform: `translate3d(${tioCardX}%, ${cardY}%, 0px) rotate(${level3Tio}deg)`,
             transition: `transform 1s ease`,
           }}
         >

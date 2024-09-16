@@ -3,7 +3,10 @@
   margin: 0;
   padding: 0;
   overflow: hidden;
+  color: white;
+  background-color: transparent;
 }
+
 
 .navbar li {
   float: left;
@@ -20,3 +23,4 @@
   background-color: transparent;
   color: white;
 }
+

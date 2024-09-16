@@ -64,9 +64,9 @@ body{
 
 .home-cards {
 
-  height: 832px;
+  /* height: 832px; */
   width: 100%;
-  height: 832px;
+  /* height: 832px; */
   flex-shrink: 0;
   position: relative;
   overflow: hidden;

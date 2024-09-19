@@ -6,6 +6,7 @@ import tio from "../../../image/tio.png";
 import chillcalories from "../../../image/ChillCalories.png";
 import appointment from "../../../image/appoinment.jpg";
 import zotes from "../../../image/zotes.png";
+import gbl from "../../../image/GlobalMetalVentures.png";
 
 function CardAnimationDeck() {
   // new content
@@ -205,7 +206,7 @@ function CardAnimationDeck() {
           <OriginalCard
             image={chillcalories}
             title="Chill Calories"
-            description="Help Users reduce their calories and lose weight"
+            description="Empower users to reduce their calorie intake and confidently work towards achieving their weight loss goals by providing the ability to search for a variety of nutritious recipes."
             url="https://play.google.com/store/apps/details?id=eachillz.dev.itv&hl=en"
             gitUrl="https://github.com/EChilin5/iTV"
             option="Android"
@@ -221,11 +222,11 @@ function CardAnimationDeck() {
           }}
         >
           <OriginalCard
-            image={appointment}
-            title="Appointments"
-            description="The frontEnd version of the app still in development"
-            url="https://appointments-7407b.web.app/"
-            gitUrl="https://github.com/EChilin5/appointment"
+            image={gbl}
+            title="Global Metal Ventures"
+            description="Provided the client with an enhanced version of their website."
+            url="https://globalmetalventures.com/"
+            gitUrl=""
             option="Web"
             trigger={trigger2}
           />
@@ -241,7 +242,7 @@ function CardAnimationDeck() {
           <OriginalCard
             image={chillcalories}
             title="Chill Calories"
-            description="Help Users reduce their calories and lose weight"
+            description="Empower users to effortlessly reduce calories and achieve their weight loss goals."
             url="https://play.google.com/store/apps/details?id=eachillz.dev.itv&hl=en"
             gitUrl="https://github.com/EChilin5/iTV"
             option="Android"
@@ -259,7 +260,7 @@ function CardAnimationDeck() {
           <OriginalCard
             image={tio}
             title="TIO CR"
-            description="Turn Images into Text with a click of a button"
+            description="Turn picture text to notes allow use"
             url="https://play.google.com/store/apps/details?id=com.eachilin.imagecut&hl=en"
             gitUrl="https://github.com/EChilin5/ImageCut_OCR"
             option="Android"

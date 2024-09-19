@@ -127,4 +127,25 @@ body{
   /* Any additional styling for your content */
 }
 
+#project{
+  /* background-image: url(../images/branch.webp); */
+  background-size: cover; /* Ensures the background covers the entire screen */
+  background-repeat: no-repeat; /* Prevents the background from repeating */
+  background-position: center center; /* Centers the background image */  
 
+}
+
+.project-chart{
+  margin: 30px 40px;
+  border-bottom: 1px solid grey;
+  border-top:1px solid grey;
+}
+
+.contact-home{
+  background: url("../images/puddle.webp");
+}
+
+#contact{
+  background: url("../images/puddle.webp");
+
+}

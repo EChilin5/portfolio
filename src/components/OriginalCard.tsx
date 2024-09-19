@@ -47,8 +47,6 @@ function OriginalCard(props: CardContent) {
           {props.option !== "Android" ? (
             <div className="card-content-tech">
               <p>REACT JS</p>
-              <p>Bootstrap</p>
-              <p>C#</p>
             </div>
           ) : (
             <div className="card-content-tech">

@@ -1,10 +1,15 @@
 .contact {
   padding-top: 5%;
-  background-color: transparent;
-  width: 90vw;
+   width: 100vw;
   /* height: 100vh; */
   position: relative;
   color: black;
+  background: url("../images/puddle.webp");
+  background-size: cover; /* Ensures the background covers the entire screen */
+  background-repeat: no-repeat; /* Prevents the background from repeating */
+  background-position: center center; /* Centers the background image */ 
+  height: auto;
+
 }
 
 /* .c-bg {

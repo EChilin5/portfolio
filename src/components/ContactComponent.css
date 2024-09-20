@@ -4,11 +4,11 @@
   /* height: 100vh; */
   position: relative;
   color: black;
-  background: url("../images/puddle.webp");
+  background: url("../images/puddlev2.webp");
   background-size: cover; /* Ensures the background covers the entire screen */
   background-repeat: no-repeat; /* Prevents the background from repeating */
   background-position: center center; /* Centers the background image */ 
-  height: auto;
+  height: 100vh;
 
 }
 
@@ -22,30 +22,34 @@
 .c-wrapper {
   padding: 5%;
   display: flex;
+  justify-content: space-between;
 }
 
 .c-left {
-  flex: 1;
+  
+  background-color: rgba(0, 0, 0, 0.312);
+  width: 490px;
+  height: 300px;
+  padding: 30px;
+  border-radius: 10px;
 }
 .c-right {
-  flex: 1;
-
+ width: 50%;
   align-items: center;
   justify-content: center;
 }
 
 .c-title {
-  font-size: 5rem;
-  width: 80%;
-  color: rgb(0, 180, 216);
+  font-size: 48px;
+  color: white;
 }
 
 .c-info-item {
   display: flex;
   align-items: center;
-  color: black;
+  color: white;
   margin: 50px 0px;
-  font-weight: 300;
+  font-weight: 500;
   width: 70%;
   font-size: 1.5rem;
 }

@@ -134,18 +134,14 @@ body{
   background-position: center center; /* Centers the background image */  
 
 }
+.project-content-home{
+  margin: 100px 30px 200px 30px;
+
+}
 
 .project-chart{
-  margin: 30px 40px;
+  margin: 30px 100px;
   border-bottom: 1px solid grey;
   border-top:1px solid grey;
 }
 
-.contact-home{
-  background: url("../images/puddle.webp");
-}
-
-#contact{
-  background: url("../images/puddle.webp");
-
-}

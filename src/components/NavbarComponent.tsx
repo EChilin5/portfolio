@@ -10,7 +10,7 @@ function TopNavBar() {
   return (
     <div className="navbar">
       <Router>
-        <Navbar expand="lg" fixed="top">
+        <Navbar bg="light" expand="lg" fixed="top">
           <Container>
             <Navbar.Brand href="#home">Chilin</Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />

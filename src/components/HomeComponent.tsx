@@ -21,7 +21,7 @@ const Home = () => {
             <h3>Develop web and mobile apps</h3>
           </div>
           <div className="btn-section">
-            <Framer>
+
             <button role="link" onClick={() => openResume(resume)}>
               Resume
             </button>
@@ -31,7 +31,7 @@ const Home = () => {
             <button role="link" onClick={() => openResume(linkedin)}>
               LinkedIn
             </button>
-            </Framer>
+
           </div>
         </div>
         <div className="home-container-right">

@@ -17,7 +17,7 @@ function HomeContent() {
       name: "TXT Labs",
       techStack: "Reat JS with TypeScript",
       description:
-      "Collborated with fellow teammates in a website redevelopment: Our focus was on integrating advanced animations to highlight our latest web development capabilities for prospective clients.For example using framer motion to create unique animations appealing to users to demonstrate the high level of website we create for our clients",
+        "Collborated with fellow teammates in a website redevelopment: Our focus was on integrating advanced animations to highlight our latest web development capabilities for prospective clients.For example using framer motion to create unique animations appealing to users to demonstrate the high level of website we create for our clients",
       git: "",
       liv: "",
       image: "",
@@ -26,7 +26,8 @@ function HomeContent() {
       id: 1,
       name: "Global Metal Ventures",
       techStack: "React Js",
-      description: "Client requested to improve there overall website based on their design in order to improve better design. Additionally incorporate the EMAIL JS API for customers to contact client directly.",
+      description:
+        "Client requested to improve there overall website based on their design in order to improve better design. Additionally incorporate the EMAIL JS API for customers to contact client directly.",
       git: "",
       liv: "",
       image: "",
@@ -45,7 +46,8 @@ function HomeContent() {
       id: 3,
       name: "Zotes",
       techStack: "Kotlin, Firebase, React Js",
-      description: "Zote Shop is an web application intended to help users buy different products. A demo application to demonstrate how products will be presented and what infromation will be available to the user.",
+      description:
+        "Zote Shop is an web application intended to help users buy different products. A demo application to demonstrate how products will be presented and what infromation will be available to the user.",
       git: "",
       liv: "",
       image: "",
@@ -60,28 +62,25 @@ function HomeContent() {
           <ConfettiTest />
         </section>
         <section id="sectionPin">
-          <div className="pin-wrap-sticky">
-            <div className="pin-wrap">
-              <div id="about">
-                <About />
-              </div>{" "}
-            </div>
-          </div>
+          <div id="about">
+            <About />
+          </div>{" "}
         </section>
         <section>
-          <div></div>
-          <div className="card-deck-title">Projects</div>
-          <div className="project-chart">
-            {projects.map((project) => {
-              return (
-                <div key={project.id}>
-                  <ProjectTemplate content={project} />
-                </div>
-              );
-            })}
+          <div id="project" className="project-content-home">
+            <div className="card-deck-title">Projects</div>
+            <div className="project-chart">
+              {projects.map((project) => {
+                return (
+                  <div key={project.id}>
+                    <ProjectTemplate content={project} />
+                  </div>
+                );
+              })}
+            </div>
           </div>
 
-          {/* <div id="project" className="project-content-home">
+          {/*
             <div className="home-cards">
               <div className="home-wrapper">
                 <div className="card-deck-title">Projects</div>
@@ -95,7 +94,7 @@ function HomeContent() {
         <section>
           <div id="contact" className="contact-home">
             <div className="contact-form-section">
-            <ConfettiTest />
+              <ConfettiTest />
 
               <ContactComponent />
             </div>

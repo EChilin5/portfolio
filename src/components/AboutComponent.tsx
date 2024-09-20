@@ -18,7 +18,7 @@ const AboutComponent = () => {
         <h2 className="about-title">About Me</h2>
 
           <div className="image-block">
-            <img src={naruto} alt="testing will be replaced" />
+            <img src={edgar} alt="testing will be replaced" />
             
           </div>
 
@@ -53,14 +53,7 @@ const AboutComponent = () => {
           </div>
 
           <p>
-            As a software developer with expertise in mobile and web
-            development, I create applications that solve real-world challenges.
-            My skills include Android development with Kotlin and Firebase, and
-            web development using React JS, C#, and SQL. I’m committed to
-            continuous learning and collaboration, having mentored teams in
-            React and TypeScript, and led QA for generative AI tools. Let’s
-            connect if you need innovative solutions and a collaborative
-            approach to your project
+         Create innovative solutions with  Android (Kotlin, Firebase) and web development (React JS, C#, SQL), from mentoring teams to leading QA for generative AI tools. Let's connect to bring a collaborative, results-driven approach to your next project.
           </p>
         </div>
       </div>

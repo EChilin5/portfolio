@@ -38,6 +38,25 @@ const ConfettiTest: React.FC = () => {
   return (
     <div>
       <Confetti
+      drawShape={ctx => {
+        ctx.beginPath();
+        
+        // Leaf-like curve logic
+        const leafWidth = 1.5;
+        const leafHeight = 2.5;
+      
+        for (let i = 0; i < 22; i++) {
+          const angle = 0.2 * i;
+          const x = (leafWidth * angle) * Math.cos(angle); // Adjust width
+          const y = (leafHeight * angle * Math.sin(angle)) * (i < 11 ? -1 : 1); // Adjust height and symmetry for top and bottom
+      
+          ctx.lineTo(x, y);
+        }
+      
+        // Stroke the path and close the shape
+        ctx.stroke();
+        ctx.closePath();
+      }}
         colors={confettiColors}
         numberOfPieces={300} // Set a static number of confetti pieces
         gravity={gravity} // Dynamic gravity based on mouse Y position

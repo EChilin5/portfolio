@@ -9,6 +9,15 @@ import Confetti from "./ConfettiTest";
 import ConfettiTest from "./ConfettiTest";
 import ContactComponent from "../components/ContactComponent";
 import ProjectTemplate from "../components/ProjectTemplate";
+import globalmetal from "../image/GlobalMetalVentures.png"
+import chill from "../image/ChillCalories.png";
+import zotes from "../image/zotes.png"
+import duck from "../image/duck.png"
+
+// /Users/txtlaptop/Desktop/portfolio/src/image/duck.ico
+
+
+
 
 function HomeContent() {
   const projects = [
@@ -19,8 +28,8 @@ function HomeContent() {
       description:
         "Collborated with fellow teammates in a website redevelopment: Our focus was on integrating advanced animations to highlight our latest web development capabilities for prospective clients.For example using framer motion to create unique animations appealing to users to demonstrate the high level of website we create for our clients",
       git: "",
-      liv: "",
-      image: "",
+      liv: "https://txtlabs.io/",
+      image: `${duck}`,
     },
     {
       id: 1,
@@ -29,8 +38,8 @@ function HomeContent() {
       description:
         "Client requested to improve there overall website based on their design in order to improve better design. Additionally incorporate the EMAIL JS API for customers to contact client directly.",
       git: "",
-      liv: "",
-      image: "",
+      liv: "https://globalmetalventures.com/",
+      image: `${globalmetal}`,
     },
     {
       id: 2,
@@ -38,9 +47,9 @@ function HomeContent() {
       techStack: "Kotlin, Firebase",
       description:
         "An android application built with Kotlin in order to help user to improve their eating habbits. The app will show users a list of food they have ate in the past, healthy restaurants, and recipes. Additionally the app will be providing the user with the amount of calories they have consumed and how many they have left. This way the user can be more cautious of what they eat.",
-      git: "",
-      liv: "",
-      image: "",
+      git: "https://github.com/EChilin5/iTV",
+      liv: "https://play.google.com/store/apps/details?id=eachillz.dev.itv&hl=en",
+      image: `${chill}`,
     },
     {
       id: 3,
@@ -48,9 +57,9 @@ function HomeContent() {
       techStack: "Kotlin, Firebase, React Js",
       description:
         "Zote Shop is an web application intended to help users buy different products. A demo application to demonstrate how products will be presented and what infromation will be available to the user.",
-      git: "",
-      liv: "",
-      image: "",
+      git: "https://github.com/EChilin5/Commerce",
+      liv: "https://play.google.com/store/apps/details?id=eachillz.dev.itv&hl=en",
+      image: `${zotes}`,
     },
   ];
 

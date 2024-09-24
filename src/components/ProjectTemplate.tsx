@@ -9,7 +9,7 @@ interface ProjectContent{
       description:string,
       git:string,
       liv:string,
-      image:string
+      image:string,
 }
 
 interface ProjectData{
@@ -23,6 +23,9 @@ function ProjectTemplate(props: ProjectData) {
 
   const onExpandBlock = ()=>{
     sendShow(!show);
+  }
+  const onOpenLink= () =>{
+
   }
 
   return (
@@ -40,11 +43,11 @@ function ProjectTemplate(props: ProjectData) {
             <div className="overall">
               <div className="overall-left">
                 <div>
-                  <img src={photo} alt="" width="180px" height="180px" />
+                  <img src={content.image} alt="" width="180px" height="180px" />
                 </div>
               </div>
               <div>
-                <div className="overall-right-name">Chill Calories</div>
+                <div className="overall-right-name">{content.name}</div>
                 <div className="overall-right-desc">
                   {content.description}
                 </div>

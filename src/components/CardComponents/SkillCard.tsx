@@ -3,10 +3,11 @@ import "./SkillCard.css"
 
 interface CardImage{
     imagePath: string;
+    projectType: string;
 }
 
 function SkillCard(props :CardImage){
-    const {imagePath} = props;
+    const {imagePath, projectType} = props;
     return (
         <div>
 
@@ -17,7 +18,7 @@ function SkillCard(props :CardImage){
         </div>
 
         <div className="skill-card-name">
-            Test
+            {projectType}
         </div>
         </div>
 

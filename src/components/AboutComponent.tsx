@@ -8,6 +8,8 @@ import reactImage from "../image/react.png";
 import kotlin from "../image/kotlin.png";
 import marker from "../image/marker.png";
 import edgar from "../image/Edgar.jpeg";
+import css from "../image/CSS.png"
+import csharp from "../image/C#.png"
 
 const AboutComponent = () => {
   return (
@@ -39,15 +41,15 @@ const AboutComponent = () => {
               <img className="marker-three" src={marker} alt="marker" />
 
               <div className="about-tech-stack">
-                <SkillCard imagePath={reactImage} />
-                <SkillCard imagePath={SQL} />
-                <SkillCard imagePath={reactImage} />
+                <SkillCard imagePath={reactImage} projectType={"React"}/>
+                <SkillCard imagePath={SQL} projectType={"SQL"} />
+                <SkillCard imagePath={csharp} projectType={"C#"} />
               </div>
               <div className="about-tech-stack">
-                <SkillCard imagePath={reactImage} />
+                <SkillCard imagePath={css}projectType={"css"} />
 
-                <SkillCard imagePath={kotlin} />
-                <SkillCard imagePath={java} />
+                <SkillCard imagePath={kotlin} projectType={"Kotlin"} />
+                <SkillCard imagePath={java} projectType={"Java"} />
               </div>
             </div>
           </div>

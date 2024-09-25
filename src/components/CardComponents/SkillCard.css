@@ -56,3 +56,20 @@
 }
 
 
+@media  screen and (min-width:390px) {
+    .skill-card-holder{
+        width: 80px;
+        height: 100px;
+        
+    }
+    .skill-card-tape-left{
+     
+        right: 43px;    
+    }
+    
+    .skill-card-tape-right{
+     
+        left: 38px;    
+    }
+    
+}

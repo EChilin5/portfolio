@@ -46,7 +46,7 @@ const Footer = () => {
                 </div>
                 <div>
                     <div>Local Time</div>
-                    <div>{laTime}</div>
+                    <div>{laTime} PST</div>
                 </div>
             </div>
             <div className='connections'>

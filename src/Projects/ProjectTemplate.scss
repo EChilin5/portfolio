@@ -126,3 +126,15 @@
     flex-direction: column;
   }
 }
+@media screen and (min-width:834px) {
+  .projecth {
+    &-container-header {
+        flex-direction: row;
+
+    }
+
+  }
+  .overall{
+    flex-direction: row;
+  }
+}

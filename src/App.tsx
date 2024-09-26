@@ -3,6 +3,7 @@ import TopNavBar from "./NavbarComponent";
 import HomePage from "./Home/HomePage";
 import ProjectPage from "./Projects/ProjectPage";
 import About from "./About/About";
+import Footer from "./Footer/Footer";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
      <HomePage/>
      <About/>
      <ProjectPage/>
+     <Footer/>
     </div>
   );
 }

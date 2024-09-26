@@ -13,7 +13,6 @@ const Footer = () => {
           timeZone: 'America/Los_Angeles',
           hour: '2-digit',
           minute: '2-digit',
-          second: '2-digit',
           hour12: true
         };
         const time = new Intl.DateTimeFormat('en-US', options).format(new Date());
@@ -54,9 +53,9 @@ const Footer = () => {
                     Connect
                 </div>
                 <div className='connections-sub'>
-                    <div>Linkedin</div>
-                    <div>Github</div>
-                    <div>Resume</div>
+                    <div className='connections-sub-item'>Linkedin</div>
+                    <div className='connections-sub-item'>Github</div>
+                    <div className='connections-sub-item'>Resume</div>
 
                 </div>
             </div>

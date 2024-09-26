@@ -54,6 +54,10 @@
     font-size: 32px;
 }
 
+.footer-outreach:hover{
+    cursor: pointer;
+}
+
 .footer-bottom{
     margin-top: 100px;
     margin-bottom: 40px;
@@ -73,10 +77,16 @@
 .connections{
     display: flex;
     flex-direction: column;
+
     &-sub{
     display: flex;
     flex-direction: row;
     gap:20px
+    }
+
+    &-sub-item:hover{
+        cursor: pointer;
+        text-decoration: underline;
     }
 
 }

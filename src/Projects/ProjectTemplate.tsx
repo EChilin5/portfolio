@@ -31,10 +31,9 @@ function ProjectTemplate(props: ProjectData) {
   return (
     <div>
       <div className="projecth-container">
-        <div className="projecth-container-header" onClick={()=>onExpandBlock()}>
+         <div className="projecth-container-header" onClick={()=>onExpandBlock()}>
           <div className="projecth-name">{content.name}</div>
           <div className="projecth-tech">Tech Stack: {content.techStack}</div>
-      
         </div>
         <div>
           {show ? (

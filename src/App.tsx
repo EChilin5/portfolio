@@ -1,10 +1,15 @@
 import React from "react";
-import TopNavBar from "./components/NavbarComponent";
+import TopNavBar from "./NavbarComponent";
+import HomePage from "./Home/HomePage";
+import ProjectPage from "./Projects/ProjectPage";
+import About from "./About/About";
 
 function App() {
   return (
     <div className="App">
-      <TopNavBar />
+     <HomePage/>
+     <About/>
+     <ProjectPage/>
     </div>
   );
 }

@@ -1,27 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&display=swap');
 
-/* html{
-  scroll-snap-type:y mandatory;
-  scroll-behavior: smooth;
-  overscroll-behavior: contain;
-  scroll-padding-top: 70px;
-
-
-}
-
-section {
-  scroll-snap-align: start;
-  transform: transition ease-in 1s;
-  scroll-snap-stop: always;
-}
-
-@keyframes move {
-  to {
-    /* Move horizontally so that the right edge is aligned against the viewport */
-    /* transform: translateX(calc(-100% + 100vw)); */
-  /* }
-} */
-
 
  
 
@@ -34,9 +12,7 @@ body{
   /* background: #eeee; */
 }
 
-.app-overall{
-  /* background-color: #eeee; */
-}
+
 
 .contact-home {
   position: relative; /* Make this container the reference point for absolute positioning */
@@ -145,3 +121,14 @@ body{
   border-top:1px solid grey;
 }
 
+@media screen and (min-width:390px) {
+  .project-chart{
+    margin: 0;
+    border-bottom: 1px solid grey;
+    border-top:1px solid grey;
+  }
+  .project-content-home{
+    margin: 100px 10px 200px 10px;
+  
+  }
+}

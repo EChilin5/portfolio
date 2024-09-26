@@ -20,9 +20,8 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    // margin: 100px 50px;
-    // padding: 10px;
-    // border-bottom: 1px solid grey;
+    height: fit-content;
+
 
   }
 
@@ -113,4 +112,17 @@
     
 
 
+}
+
+@media screen and (min-width:390px) {
+  .projecth {
+    &-container-header {
+        flex-direction: column;
+
+    }
+
+  }
+  .overall{
+    flex-direction: column;
+  }
 }

@@ -1,0 +1,76 @@
+.about-main{
+    margin: 50px 50px;
+}
+.about-header{
+    text-align: center;
+    font-size: 42px;
+}
+
+.tech{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    color: black;
+}
+
+.about-photo{
+    img{
+        width: 200px;
+        height: 200px;
+        border-radius: 100px;
+    }
+}
+
+
+.about-description{
+    width: 600px;
+    font-size: 30px;
+    text-align: left;
+}
+.about-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+
+}
+
+.about-tech-title{
+    text-align: center;
+    font-size: 42px;
+}
+
+.tech-card{
+    position: relative;
+    // color: white;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid black;
+    margin-bottom: 10px;
+    padding: 10px;
+
+
+
+    &-overllay{
+        width: 100px;
+        height: 100px;
+        background-color: rgba(50, 47, 47, 0.222);
+        z-index: 2;
+        position: relative;
+
+        img{
+            opacity: 0.5;
+            // z-index: -1;
+            position: relative;
+            width:100px;
+            height:100px;
+        }
+    }
+
+    
+}

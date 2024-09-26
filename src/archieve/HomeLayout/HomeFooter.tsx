@@ -1,7 +1,7 @@
 import React from "react";
-import ContactComponent from "../components/ContactComponent";
 import ConfettiTest from "./ConfettiTest";
 import "./HomeContent.css";
+import ContactComponent from "../components/ContactComponent";
 
 const HomeFooter = () => {
   return (

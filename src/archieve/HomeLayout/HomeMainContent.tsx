@@ -4,10 +4,9 @@ import chill from "../image/ChillCalories.png";
 import zotes from "../image/zotes.png"
 import duck from "../image/duck.png"
 import globalmetal from "../image/GlobalMetalVentures.png"
-import Home from '../components/HomeComponent';
-import ProjectTemplate from '../components/ProjectTemplate';
 import ConfettiTest from './ConfettiTest';
-import About from "../components/AboutComponent";
+import Home from '../components/HomeComponent';
+import ProjectTemplate from '../../Projects/ProjectTemplate';
 
 
 
@@ -56,15 +55,15 @@ const HomeMainContent = () => {
         },
       ];
   return (
-    <div className="app-overall">
-      <div className="content">
+    <div>
+      <div>
         <section>
           <Home />
           <ConfettiTest />
         </section>
         <section id="sectionPin">
           <div id="about">
-            <About />
+            {/* <About /> */}
           </div>{" "}
         </section>
         <section>

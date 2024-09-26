@@ -73,3 +73,11 @@
     }
     
 }
+
+@media  screen and (min-width:390px) {
+    .skill-card-holder{
+        width: 150px;
+        height: 150px;
+        
+    }
+}

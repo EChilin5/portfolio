@@ -2,8 +2,8 @@ import React from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
-import HomeContent from "../HomeLayout/HomeContent";
-import ErrorPage from "./ErrorPage";
+import ErrorPage from "./archieve/components/ErrorPage";
+import HomePage from "./Home/HomePage";
 
 
 function TopNavBar() {
@@ -31,7 +31,7 @@ function TopNavBar() {
           </Container>
         </Navbar>
         <Routes>
-          <Route path="/" element={<HomeContent />} />
+          <Route path="/" element={<HomePage />} />
           <Route path="*" element={<ErrorPage />} />
         </Routes>
       </Router>

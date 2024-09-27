@@ -38,6 +38,7 @@ const FluidAnimation: React.FC = () => {
       SUNRAYS: true,
       SUNRAYS_RESOLUTION: 196,
       SUNRAYS_WEIGHT: 1.0,
+
     });
 
     if (canvasRef.current) {

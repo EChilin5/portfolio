@@ -6,6 +6,20 @@ const Footer = () => {
 
     const [laTime, setLaTime] = useState<string>("");
 
+    const openEmail =()=>{
+      window.open('mailto:eachilin@gmail.com?subject=Subject&body=Body%20goes%20here')
+
+    }
+
+    let linkedin = "https://www.linkedin.com/in/edgar-c/";
+  let resume =
+    "https://drive.google.com/file/d/1cFr7-XmffshG0JXaFawLZIUjbvWUqSCm/view?usp=sharing";
+  let Github = "https://github.com/EChilin5";
+  const openLink = (url: string) => {
+    window.open(url, "_blank", "noreferrer");
+  };
+
+
     useEffect(() => {
       // Function to get the current time in Los Angeles
       const getLATime = () => {
@@ -34,8 +48,9 @@ const Footer = () => {
         </div>
         <hr className='footer-hr'></hr>
         <div className='footer-header-sub'>
-                    <div className='footer-outreach'>eachilin@gmail.com</div>
-        <div className='footer-outreach'>323-807-****</div>
+                    <div className='footer-outreach' onClick={()=>openEmail()}>eachilin@gmail.com</div>
+        <div className='footer-outreach' >
+          <a className='footer-call'href="tel:323-807-4832">323-807-****</a></div>
         </div>
         <div className='footer-bottom'>
             <div className='version'>
@@ -53,9 +68,9 @@ const Footer = () => {
                     Connect
                 </div>
                 <div className='connections-sub'>
-                    <div className='connections-sub-item'>Linkedin</div>
-                    <div className='connections-sub-item'>Github</div>
-                    <div className='connections-sub-item'>Resume</div>
+                    <div className='connections-sub-item' onClick={()=>openLink(linkedin)} >Linkedin</div>
+                    <div className='connections-sub-item' onClick={()=>openLink(Github)}>Github</div>
+                    <div className='connections-sub-item' onClick={()=>openLink(resume)}>Resume</div>
 
                 </div>
             </div>

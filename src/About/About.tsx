@@ -7,6 +7,7 @@ import edgar from "../image/Edgar.jpeg";
 import css from "../image/CSS.png";
 import csharp from "../image/C#.png";
 import "./About.scss";
+import Magnetic from "../Animation/Magnets";
 
 const About = () => {
   const techSkills = [
@@ -52,20 +53,24 @@ const About = () => {
       </div>
 
       <div className="about-tech-title"> Tech Stack</div>
-      <div className="tech">
-        {techSkills.map((tech) => {
-          return (
-            <div key={tech.name}>
-              <div className="tech-card">
-                <div className="tech-card-overllay">
-                  <img src={tech.image} alt="test" />
+      {/* <Magnetic> */}
+        <div className="tech">
+          {techSkills.map((tech) => {
+            return (
+              <Magnetic>
+              <div key={tech.name}>
+                <div className="tech-card">
+                  <div className="tech-card-overllay">
+                    <img src={tech.image} alt="test" />
+                  </div>
+                  <div> {tech.name}</div>
                 </div>
-                <div> {tech.name}</div>
               </div>
-            </div>
-          );
-        })}
-      </div>
+              </Magnetic>
+            );
+          })}
+        </div>
+   
     </div>
   );
 };

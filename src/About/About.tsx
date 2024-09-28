@@ -8,8 +8,15 @@ import css from "../image/CSS.png";
 import csharp from "../image/C#.png";
 import "./About.scss";
 import Magnetic from "../Animation/Magnets";
+import { motion, MotionValue } from "framer-motion";
+
+interface Motion{
+  y:MotionValue<number>;
+}
 
 const About = () => {
+  // const {y} = props;
+
   const techSkills = [
     {
       name: "java",
@@ -53,7 +60,6 @@ const About = () => {
       </div>
 
       <div className="about-tech-title"> Tech Stack</div>
-      {/* <Magnetic> */}
         <div className="tech">
           {techSkills.map((tech) => {
             return (

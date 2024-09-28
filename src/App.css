@@ -1,2 +1,16 @@
+.app-main {
+    position: relative;
+    overflow: hidden; /* Make sure content can overflow */
+    height: 290vh;
 
+}
 
+.app-container {
+    position: relative;
+    /* height: 150vh; Keep the large height */
+    top:-15%; /* Moves the container up by 45% of its height */
+    overflow: hidden; /* Make sure content can overflow */
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}

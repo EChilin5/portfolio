@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./HomePage.scss";
 import FluidAnimation from "../archieve/components/AnimationComponents/FluidAnimation";
 import edgar2 from "./file.png"
 import edgar3 from "./test.png"
+import Lenis from "lenis";
 
 const HomePage = () => {
 
@@ -13,6 +14,8 @@ const HomePage = () => {
   const openLink = (url: string) => {
     window.open(url, "_blank", "noreferrer");
   };
+
+ 
 
   return (
     <div className="home-main">
@@ -33,7 +36,7 @@ const HomePage = () => {
         </div>
       </div>
       <div className="home-image">
-        <img src={edgar3} alt="edgar2"/>
+        {/* <img src={edgar2} alt="edgar2"/> */}
       </div>
       <div className="home-fluid">
       <FluidAnimation/>

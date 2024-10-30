@@ -1,0 +1,20 @@
+.web-container {
+    width: 600px;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    background-color: #2E343F;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.web-image {
+    img {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+.web-right {
+    color: white;
+}

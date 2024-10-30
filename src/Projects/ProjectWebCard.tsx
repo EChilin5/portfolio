@@ -1,4 +1,5 @@
 import React from "react";
+import "./ProjectWebCard.scss";
 
 interface ProjectContent {
   id: number;

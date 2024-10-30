@@ -1,16 +1,16 @@
-.footer-container{
+.footer-container {
     padding: 150px 100px 0 100px;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    background-color: black;
-    color: white;
+    background-color: #83F4F8;
+    color: black;
     position: relative;
 
 
 }
 
-.footer-header{
+.footer-header {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -18,55 +18,59 @@
     align-items: center;
     // justify-content: center;
 
-    &-text{
+    &-text {
         font-size: 80px;
+        color: WHITE;
     }
 }
 
-.footer-profile{
-    img{
+.footer-profile {
+    img {
         width: 200px;
-    height: 200px;
-    border-radius: 100%;
+        height: 200px;
+        border-radius: 100%;
     }
-    
+
 }
 
-.footer-hr{
+.footer-hr {
     margin-left: 300px;
     margin-top: -30px;
     margin-right: 200px;
 }
 
-.footer-header-sub{
+.footer-header-sub {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: flex-end;
     justify-content: flex-end;
-    gap:40px
+    gap: 40px
 }
 
-.footer-outreach{
-    border: 1px solid white;
+.footer-outreach {
+    border: 2px solid black;
+    background-color: WHITE;
+
     padding: 20px;
     border-radius: 50px;
     font-size: 32px;
 
-    a{
+    a {
         text-decoration: none;
-        color: white;
+        color: black;
     }
 }
-.footer-call{
+
+.footer-call {
     text-decoration: none;
 }
 
-.footer-outreach:hover{
+.footer-outreach:hover {
     cursor: pointer;
 }
 
-.footer-bottom{
+.footer-bottom {
     margin-top: 100px;
     margin-bottom: 40px;
     display: flex;
@@ -78,21 +82,21 @@
 .version {
     display: flex;
     flex-direction: row;
-    gap:60px;
+    gap: 60px;
 }
 
 
-.connections{
+.connections {
     display: flex;
     flex-direction: column;
 
-    &-sub{
-    display: flex;
-    flex-direction: row;
-    gap:20px
+    &-sub {
+        display: flex;
+        flex-direction: row;
+        gap: 20px
     }
 
-    &-sub-item:hover{
+    &-sub-item:hover {
         cursor: pointer;
         text-decoration: underline;
     }

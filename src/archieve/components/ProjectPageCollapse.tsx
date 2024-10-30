@@ -3,12 +3,10 @@ import chill from "../image/ChillCalories.png";
 import zotes from "../image/zotes.png";
 import duck from "../image/duck.png";
 import globalmetal from "../image/GlobalMetalVentures.png";
-import ProjectTemplate from "./ProjectTemplate";
+// import ProjectTemplate from "./ProjectTemplate";
 import "./ProjectPage.scss";
-import ProjectAppCard from "./ProjectAppCard";
-import ProjectWebCard from "./ProjectWebCard";
 
-const ProjectPage = () => {
+const ProjectPageCollapse = () => {
   const projects = [
     {
       id: 0,
@@ -30,9 +28,6 @@ const ProjectPage = () => {
       liv: "https://globalmetalventures.com/",
       image: `${globalmetal}`,
     },
-  ];
-
-  const apps = [
     {
       id: 2,
       name: "Chill Calories",
@@ -53,41 +48,17 @@ const ProjectPage = () => {
       liv: "https://play.google.com/store/apps/details?id=eachillz.dev.itv&hl=en",
       image: `${zotes}`,
     },
-    {
-      id: 4,
-      name: "Chill Calories",
-      techStack: "Kotlin, Firebase",
-      description:
-        "An android application built with Kotlin in order to help user to improve their eating habbits. The app will show users a list of food they have ate in the past, healthy restaurants, and recipes. Additionally the app will be providing the user with the amount of calories they have consumed and how many they have left. This way the user can be more cautious of what they eat.",
-      git: "https://github.com/EChilin5/iTV",
-      liv: "https://play.google.com/store/apps/details?id=eachillz.dev.itv&hl=en",
-      image: `${chill}`,
-    },
   ];
 
   return (
     <div>
       <div id="project" className="project-container">
         <div className="project-title">Projects</div>
-        <div className="project-sub-title">
-          {" "}
-          personalized service, expert repairs, quality products, and a
-          community-driven experience
-        </div>
-        <div className="web-project-container">
-          {projects.map((data) => {
+        <div className="project-chart">
+          {projects.map((project) => {
             return (
-              <div key={data.id}>
-                <ProjectWebCard content={data} />
-              </div>
-            );
-          })}
-        </div>
-        <div className="app-project-container">
-          {apps.map((data) => {
-            return (
-              <div key={data.id}>
-                <ProjectAppCard content={data} />
+              <div key={project.id}>
+                {/* <ProjectTemplate content={project} /> */}
               </div>
             );
           })}
@@ -97,4 +68,4 @@ const ProjectPage = () => {
   );
 };
 
-export default ProjectPage;
+export default ProjectPageCollapse;

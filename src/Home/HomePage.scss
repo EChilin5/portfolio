@@ -1,56 +1,101 @@
-.home-main{
+@import url('https://fonts.googleapis.com/css2?family=Margarine&display=swap');
+
+.home-main {
     width: 100%;
     height: 100vh;
+    background-color: #000000;
+    opacity: 88%;
 }
-.home-container{
+
+.home-container {
     width: 100%;
     height: 100%;
     // background-color: rgb(35, 33, 33);
     color: white;
     pointer-events: none;
     position: absolute;
-    z-index:3;
+    z-index: 3;
 }
 
-.home-image{
+.home-image {
     position: absolute;
     width: 100%;
     height: 100vh;
     z-index: 2;
     pointer-events: none;
 
-    img{
+    img {
         height: 100vh;
         padding-left: 300px;
         opacity: 0.9;
     }
 }
 
-.home-fluid{
+.home-fluid {
     position: absolute;
 }
 
-.home-header{
+.home-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+    top: 20%;
+}
+
+.home-main-header {
+    position: relative;
+    width: 70%;
+}
+
+.home-header {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    position: relative;
-    top: 40%;
+    position: absolute;
+    top: 34%;
+    left: 6%;
 
-    &-title{
+
+    &-title {
         font-size: 128px;
         font-weight: 900;
+        font-family: "Margarine", sans-serif;
+
     }
-    &-sub{
+
+    &-sub {
         font-size: 64px;
         text-align: right;
         font-weight: 700;
+        font-family: "Margarine", sans-serif;
+
     }
 }
 
-.home-bottom{
+.home-images {
+    position: relative;
+    width: 40%;
+
+    &-location {
+        position: relative;
+
+        .oultine-img {
+            position: absolute;
+            top: 10%
+        }
+
+        .full-img {
+            position: absolute;
+        }
+    }
+}
+
+.home-bottom {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -58,36 +103,42 @@
     bottom: -400px;
     margin-left: 150px;
     margin-right: 150px;
-    
+
 }
 
-.social-groups{
+.social-groups {
     width: auto;
     display: flex;
     flex-direction: row;
-    gap:30px;
+    gap: 30px;
     pointer-events: all;
 
-    &-item{
+    &-item {
         font-size: 20px;
         border: 2px solid white;
         border-radius: 10px;
-        padding:20px;
+        padding: 20px;
         pointer-events: all;
-        
+
     }
 
-    &-item:hover{
+    &-item:hover {
         pointer-events: all;
         cursor: pointer;
-       border: 2px solid lightblue;
+        border: 2px solid lightblue;
     }
 }
 
-.home-description{
+.home-description {
     width: 400px;
     text-align: left;
     font-weight: 500;
 }
 
 
+.tech-Stack {
+    position: relative;
+    text-align: center;
+    bottom: -85%;
+    font-size: 32px;
+}

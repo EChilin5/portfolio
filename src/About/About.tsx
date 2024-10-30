@@ -10,8 +10,8 @@ import "./About.scss";
 import Magnetic from "../Animation/Magnets";
 import { motion, MotionValue } from "framer-motion";
 
-interface Motion{
-  y:MotionValue<number>;
+interface Motion {
+  y: MotionValue<number>;
 }
 
 const About = () => {
@@ -49,21 +49,20 @@ const About = () => {
       <div className="about-header">
         <div className="about-header-title">About Me</div>
         <div className="about-container">
-          <div className="about-photo">
-            <img src={edgar} alt="edgar" />
-          </div>
           <div className="about-description">
-            A software developer with experience from web to mobile
-            applications. Provide users with quality content.
+            Create innovative solutions with Android (Kotlin, Firebase) and web
+            development (React JS, C#, SQL), from mentoring teams to leading QA
+            for generative AI tools. Let's connect to bring a collaborative,
+            results-driven approach to your next project.
           </div>
         </div>
       </div>
 
-      <div className="about-tech-title"> Tech Stack</div>
-        <div className="tech">
-          {techSkills.map((tech) => {
-            return (
-              <Magnetic>
+      {/* <div className="about-tech-title"> Tech Stack</div>
+      <div className="tech">
+        {techSkills.map((tech) => {
+          return (
+            <Magnetic>
               <div key={tech.name}>
                 <div className="tech-card">
                   <div className="tech-card-overllay">
@@ -72,11 +71,10 @@ const About = () => {
                   <div> {tech.name}</div>
                 </div>
               </div>
-              </Magnetic>
-            );
-          })}
-        </div>
-   
+            </Magnetic>
+          );
+        })}
+      </div> */}
     </div>
   );
 };

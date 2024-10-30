@@ -1,14 +1,15 @@
-.about-main{
-    margin: 50px 50px; 
-  
+.about-main {
+    margin: 50px 50px;
+
 
 }
-.about-header{
+
+.about-header {
     text-align: center;
-    font-size: 42px;
+    font-size: 100px;
 }
 
-.tech{
+.tech {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -17,8 +18,8 @@
     color: black;
 }
 
-.about-photo{
-    img{
+.about-photo {
+    img {
         width: 200px;
         height: 200px;
         border-radius: 100px;
@@ -26,12 +27,16 @@
 }
 
 
-.about-description{
-    width: 600px;
-    font-size: 30px;
-    text-align: left;
+.about-description {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    font-size: 36px;
+    text-align: center;
 }
-.about-container{
+
+.about-container {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -40,12 +45,12 @@
 
 }
 
-.about-tech-title{
+.about-tech-title {
     text-align: center;
     font-size: 42px;
 }
 
-.tech-card{
+.tech-card {
     position: relative;
     // color: white;
     text-align: center;
@@ -57,26 +62,26 @@
     padding: 10px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
-    &:hover{
+    &:hover {
         cursor: pointer;
     }
 
 
-    &-overllay{
+    &-overllay {
         width: 100px;
         height: 100px;
         background-color: rgba(50, 47, 47, 0.222);
         z-index: 2;
         position: relative;
 
-        img{
+        img {
             opacity: 0.5;
             // z-index: -1;
             position: relative;
-            width:100px;
-            height:100px;
+            width: 100px;
+            height: 100px;
         }
     }
 
-    
+
 }

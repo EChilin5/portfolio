@@ -8,6 +8,7 @@ import happface from "../image/Happy face.png";
 import star from "../image/Star 5.png";
 import outlinecircle from "../image/Ellipse 6.png";
 import fullcircle from "../image/Ellipse 7.png";
+import SlideablePage from "../ParalaxEffect/SlideablePage";
 
 const HomePage = () => {
   let linkedin = "https://www.linkedin.com/in/edgar-c/";
@@ -72,8 +73,7 @@ const HomePage = () => {
           <div>React, Java, HTML, JavaScript, C#, Python, .NET</div>
         </div>
       </div>
-      <div className="home-image">{/* <img src={edgar2} alt="edgar2"/> */}</div>
-      <div className="home-fluid">{/* <FluidAnimation /> */}</div>
+      {/* <div className="home-image"><img src={edgar2} alt="edgar2"/></div> */}
     </div>
   );
 };

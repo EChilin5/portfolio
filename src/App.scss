@@ -1,0 +1,32 @@
+.app-main {
+  position: relative;
+  overflow: hidden; /* Make sure content can overflow */
+  height: 250vh;
+}
+
+.app-container {
+  position: relative;
+  /* height: 150vh; Keep the large height */
+  top: -20%; /* Moves the container up by 45% of its height */
+  overflow: hidden; /* Make sure content can overflow */
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.home-hero-display{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+
+  &-main{
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+  }
+  &-sub{
+    position: absolute;
+    width: 100%;
+    z-index: 0;
+  }
+}

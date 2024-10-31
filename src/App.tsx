@@ -7,7 +7,8 @@ import Footer from "./Footer/Footer";
 import Lenis from "lenis";
 import { useTransform, useScroll, motion, MotionValue } from "framer-motion";
 import useDimension from "./useDimension";
-import "./App.css";
+import "./App.scss";
+import SlideablePage from "./ParalaxEffect/SlideablePage";
 
 function App() {
   // useEffect(() => {
@@ -39,7 +40,14 @@ function App() {
 
   return (
     <div className="App">
-      <HomePage />
+      <div className="home-hero-display">
+        <div className="home-hero-display-main">
+          <HomePage/>
+        </div>
+        <div className="home-hero-display-sub">
+          <SlideablePage/>
+        </div>
+      </div>
       <div className="app-main" ref={container}>
         <motion.div style={{ y }} className="app-container">
           <div>

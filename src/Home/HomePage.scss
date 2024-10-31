@@ -3,25 +3,27 @@
 .home-main {
     width: 100%;
     height: 100vh;
-    background-color: #000000;
-    opacity: 88%;
+
 }
 
 .home-container {
+    position: relative;
     width: 100%;
     height: 100%;
     // background-color: rgb(35, 33, 33);
     color: white;
     pointer-events: none;
-    position: absolute;
+    // position: absolute;
+    background-color: #000000;
+    opacity: 80%;
     z-index: 3;
 }
 
 .home-image {
-    position: absolute;
+    position: relative;
     width: 100%;
     height: 100vh;
-    z-index: 2;
+    z-index: 4;
     pointer-events: none;
 
     img {
@@ -33,6 +35,7 @@
 
 .home-fluid {
     position: absolute;
+    z-index: 0;
 }
 
 .home-wrapper {

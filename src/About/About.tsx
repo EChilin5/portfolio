@@ -9,6 +9,7 @@ import csharp from "../image/C#.png";
 import "./About.scss";
 import Magnetic from "../Animation/Magnets";
 import { motion, MotionValue } from "framer-motion";
+import HomeMovingText from "./HomeMovingText";
 
 interface Motion {
   y: MotionValue<number>;
@@ -47,14 +48,8 @@ const About = () => {
   return (
     <div className="about-main">
       <div className="about-header">
-        <div className="about-header-title">About Me</div>
         <div className="about-container">
-          <div className="about-description">
-            Create innovative solutions with Android (Kotlin, Firebase) and web
-            development (React JS, C#, SQL), from mentoring teams to leading QA
-            for generative AI tools. Let's connect to bring a collaborative,
-            results-driven approach to your next project.
-          </div>
+        <HomeMovingText/>
         </div>
       </div>
 

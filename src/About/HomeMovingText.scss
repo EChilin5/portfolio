@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bungee&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Permanent+Marker&family=Rubik+Bubbles&display=swap");
+
+
+.home-title-container {
+  width: 100%;
+  // height: 304px;
+  display: flex;
+  padding: 100px 0px 64px 0px;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  align-self: stretch;
+  overflow: hidden;
+  position: relative;
+}
+
+.home-title-content-heading {
+  align-self: stretch;
+  color: black;
+  text-align: center;
+   font-family: Montserrat;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%; /* 144px */
+  text-transform: uppercase;
+  margin-left: 20px;
+  text-align: left;
+}
+
+.home-title-content-main {
+  width: 358px;
+  color: grey;
+  text-align: center;
+   font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
+}
+
+.home-scroll-text {
+  color: black;
+  text-align: center;
+   font-family: Montserrat;
+  font-style: normal;
+  font-weight: 400;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  position: relative;
+  width: 358px;
+  font-size: 16px;
+  justify-content: flex-start;
+  line-height: 150%; /* 24px */
+  margin: 16px 8px;
+}
+
+.word {
+  margin-right: 5px;
+  margin-top: 6px;
+  position: relative;
+}
+
+.shadow {
+  position: absolute;
+  opacity: 0.1;
+}
+
+
+@media screen and (min-width: 470px) {
+  .home-title-container {
+    display: flex;
+    padding: 210px 0px 210px 0px;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    align-self: stretch;
+  }
+
+  .home-title-content-heading {
+    font-size: 40px;
+    line-height: 150%; /* 192px */
+    text-align: center;
+    margin-left: 8px;
+  }
+
+  .home-title-content-main {
+    width: 380px;
+    font-size: 20px;
+    justify-content: center;
+
+
+  }
+
+  .home-scroll-text {
+    width: 380px;
+    font-size: 20px;
+    justify-content: center;
+
+  }
+  .word {
+    margin-right: 6px;
+
+  }
+}
+
+
+@media screen and (min-width: 620px) {
+  .home-title-container {
+    display: flex;
+    // padding: 210px 0px 210px 0px;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    align-self: stretch;
+  }
+
+  .home-title-content-heading {
+    font-size: 40px;
+    line-height: 150%; /* 192px */
+    text-align: center;
+  }
+
+  .home-title-content-main {
+    width: 600px;
+    font-size: 20px;
+    justify-content: center;
+
+  }
+
+  .home-scroll-text {
+    width: 600px;
+    font-size: 20px;
+    justify-content: center;
+
+  }
+  .word {
+    margin-right: 6px;
+
+  }
+}
+
+
+@media screen and (min-width: 834px) {
+  .home-title-container {
+    display: flex;
+    // padding: 210px 0px 210px 0px;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    align-self: stretch;
+  }
+
+  .home-title-content-heading {
+    font-size: 64px;
+    line-height: 150%; /* 192px */
+    text-align: center;
+  }
+
+  .home-title-content-main {
+    width: 786px;
+    font-size: 24px;
+    justify-content: center;
+
+  }
+
+  .home-scroll-text {
+    width: 786px;
+    font-size: 24px;
+    justify-content: center;
+
+  }
+  .word {
+    margin-right: 9px;
+
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .home-title-container {
+    width: 100%;
+    // height: 304px;
+    display: flex;
+    // padding: 210px 0px;
+    flex-direction: column;
+    align-items: center;
+    gap: 64px;
+    align-self: stretch;
+    overflow: hidden;
+  }
+
+  .home-title-content-heading {
+  font-size: 96px;
+    line-height: 150%; /* 192px */
+  }
+
+  .home-title-content-main {
+    width: 1050px;
+    font-size: 32px;
+  }
+
+  .home-scroll-text {
+    width: 1050px;
+    font-size: 32px;
+  }
+  .word {
+    margin-right: 10px;
+    margin-top: 12px;
+  }
+
+  /* No need to redefine unchanged styles for home-scroll-text */
+}
+
+
+
+@media screen and (min-width: 1728px) {
+  .home-title-content-heading {
+    font-size: 128px;
+    line-height: 150%; /* 192px */
+  }
+
+  .home-title-content-main {
+    width: 1528px;
+    font-size: 44px;
+  }
+
+  .home-scroll-text {
+    width: 1528px;
+    font-size: 44px;
+  }
+
+  /* No need to redefine unchanged styles for home-scroll-text */
+}

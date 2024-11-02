@@ -49,14 +49,14 @@ function App() {
         </div>
       </div>
       <div className="app-main" ref={container}>
-        <motion.div style={{ y }} className="app-container">
+        {/* <motion.div style={{ y }} className="app-container"> */}
           <div>
             <About />
           </div>
           <div>
             <ProjectPage />
           </div>
-        </motion.div>
+        {/* </motion.div> */}
       </div>
       <div
         style={{

@@ -1,6 +1,7 @@
 .project-container {
     background-color: #000;
     padding: 20px;
+    height: 600vh;
 }
 
 .project-title {
@@ -26,11 +27,37 @@
     gap: 10px
 }
 
-.web-project-container {
-    display: flex;
+.web-project-main-container{
+    width: 100%;
+    height: 400vh;
     flex-direction: row;
+    gap:2vw;
+    padding: 2vw;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.web-project-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 10px;
-    margin-bottom: 20px;
+    position: relative;
+
+    &:nth-of-type(1){
+        top: 10%;
+    }
+
+    // &:nth-of-type(2){
+    //     top: -135%;
+    // }
+    // &:nth-of-type(3){
+    //     top: -140%;
+    // }
+    // &:nth-of-type(4){
+    //     top: -135%;
+    // }
 }

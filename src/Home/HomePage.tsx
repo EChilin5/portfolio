@@ -11,10 +11,10 @@ import fullcircle from "../image/Ellipse 7.png";
 import SlideablePage from "../ParalaxEffect/SlideablePage";
 
 const HomePage = () => {
-  let linkedin = "https://www.linkedin.com/in/edgar-c/";
-  let resume =
+  const linkedin = "https://www.linkedin.com/in/edgar-c/";
+  const resume =
     "https://drive.google.com/file/d/1cFr7-XmffshG0JXaFawLZIUjbvWUqSCm/view?usp=sharing";
-  let Github = "https://github.com/EChilin5";
+  const Github = "https://github.com/EChilin5";
   const openLink = (url: string) => {
     window.open(url, "_blank", "noreferrer");
   };

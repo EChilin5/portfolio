@@ -10,6 +10,7 @@ import ProjectWebCard from "./ProjectWebCard";
 import { useTransform, useScroll, motion, MotionValue } from "framer-motion";
 import useDimension from "../useDimension";
 import { useDebounce } from "react-use";
+import { transform } from "typescript";
 
 const ProjectPage = () => {
   const projects = [
@@ -91,7 +92,6 @@ const ProjectPage = () => {
     offset: ["start end", "end start"],
   });
 
-
   const { height } = useDimension();
 
   const { scrollYProgress: itemScrollYProgress } = useScroll({
@@ -101,11 +101,14 @@ const ProjectPage = () => {
 
   const y = useTransform(scrollYProgress, [0, 1], [height * 2, 0]);
 
-  const backgroundColor = useTransform(scrollYProgress, [0, 1], [
-    "rgba(255, 255, 255, 1)",  // Start color (white)
-    "rgba(0, 0, 0, 1)"         // End color (black)
-  ]);
-
+  const backgroundColor = useTransform(
+    scrollYProgress,
+    [0, 1],
+    [
+      "rgba(255, 255, 255, 1)", // Start color (white)
+      "rgba(0, 0, 0, 1)", // End color (black)
+    ]
+  );
 
   return (
     <div>
@@ -118,19 +121,38 @@ const ProjectPage = () => {
         </div>
         <div ref={container} className="web-project-main-container">
           <motion.div style={{ y }} className="web-project-container">
-            {projects.map((data, index) => {
-              return (
-                <div
-                  ref={itemRef}
-                  className="web-project-item"
-                  key={data.id}
-                  style={{ background: backgroundColor }}
-                  >
-                  <ProjectWebCard content={data} />
-
-                </div>
-              );
-            })}
+            {projects.map((data, index) => (
+              <motion.div
+                // Attaches a ref for DOM manipulation
+                ref={itemRef}
+                // Regular CSS class
+                className="web-project-item "
+                // Unique key for React list rendering
+                key={data.id}
+                // Starting state when component mounts
+                initial={{
+                  opacity: 0.4, // Starts partially transparent
+                  y: 16, // Shifted 16px down
+                  rotateX: -40, // Tilted backward 12 degrees
+                }}
+                // Animation that triggers when component comes into view
+                whileInView={{
+                  opacity: 1, // Becomes fully visible
+                  y: 0, // Moves to original vertical position
+                  rotateX: 0, // Becomes flat (no tilt)
+                  transition: {
+                    duration: 2, // Takes 0.5 seconds to animate
+                  },
+                }}
+                // Controls how the whileInView animation triggers
+                viewport={{
+                  once: false, // Animation will trigger every time it enters viewport
+                  amount: 0.5, // Triggers when 50% of component is visible
+                }}
+              >
+                <ProjectWebCard content={data} />
+              </motion.div>
+            ))}
           </motion.div>
         </div>
       </div>

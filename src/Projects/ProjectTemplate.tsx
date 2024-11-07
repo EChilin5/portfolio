@@ -50,8 +50,8 @@ function ProjectTemplate(props: ProjectData) {
                 </div>
 
                 <div className="overall-btn-group">
-                  <button>GitHub</button>
-                  <button>Live Link</button>
+                  <div>GitHub</div>
+                  <div>Live Link</div>
                 </div>
               </div>
             </div>

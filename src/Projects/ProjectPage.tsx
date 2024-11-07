@@ -11,6 +11,8 @@ import { useTransform, useScroll, motion, MotionValue } from "framer-motion";
 import useDimension from "../useDimension";
 import { useDebounce } from "react-use";
 import { transform } from "typescript";
+import ProjectWebCardText from "./ProjectWebCardText";
+import { over, update } from "lodash";
 
 const ProjectPage = () => {
   const projects = [
@@ -83,6 +85,7 @@ const ProjectPage = () => {
 
   const itemRef = useRef(null);
   const [isInView, setIsInView] = useState(false);
+  const [overallState, setOverallState] = useState("black");
 
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -110,6 +113,14 @@ const ProjectPage = () => {
     ]
   );
 
+  const updateBackground = (id: number) => {
+    const color = ["black", "red", "teal", "green", "lightblue", "orange"];
+    console.log(color[id + 1]);
+    setOverallState(color[id]);
+
+    return color[id];
+  };
+
   return (
     <div>
       <div id="project" className="project-container">
@@ -119,39 +130,114 @@ const ProjectPage = () => {
           personalized service, expert repairs, quality products, and a
           community-driven experience
         </div>
-        <div ref={container} className="web-project-main-container">
-          <motion.div style={{ y }} className="web-project-container">
+        <div
+          ref={container}
+          className="web-project-main-container"
+          style={{ backgroundColor: overallState }}
+        >
+          <motion.div
+            style={{ y }}
+            className="web-project-container"
+          >
             {projects.map((data, index) => (
-              <motion.div
-                // Attaches a ref for DOM manipulation
-                ref={itemRef}
-                // Regular CSS class
-                className="web-project-item "
-                // Unique key for React list rendering
-                key={data.id}
-                // Starting state when component mounts
-                initial={{
-                  opacity: 0.4, // Starts partially transparent
-                  y: 16, // Shifted 16px down
-                  rotateX: -40, // Tilted backward 12 degrees
-                }}
-                // Animation that triggers when component comes into view
-                whileInView={{
-                  opacity: 1, // Becomes fully visible
-                  y: 0, // Moves to original vertical position
-                  rotateX: 0, // Becomes flat (no tilt)
-                  transition: {
-                    duration: 2, // Takes 0.5 seconds to animate
-                  },
-                }}
-                // Controls how the whileInView animation triggers
-                viewport={{
-                  once: false, // Animation will trigger every time it enters viewport
-                  amount: 0.5, // Triggers when 50% of component is visible
-                }}
-              >
-                <ProjectWebCard content={data} />
-              </motion.div>
+              <div className="card-carousel-projects">
+                <div>
+                  <motion.div
+                    // Attaches a ref for DOM manipulation
+                    ref={itemRef}
+                    // Regular CSS class
+                    className="web-project-item"
+                    // Unique key for React list rendering
+                    key={data.id}
+                    // Starting state when component mounts
+                    initial={{
+                      opacity: 0.4, // Starts partially transparent
+                      y: 16, // Shifted 16px down
+                      rotateX: 30, // Becomes flat (no tilt)
+                      rotateY: 30,
+                    }}
+                    // Animation that triggers when component comes into view
+                    whileInView={{
+                      opacity: 1,
+                      y: [-10, 0, -10], // Combined floating animation
+                      rotateX: 30,
+                      rotateY: 30,
+                      transition: {
+                        opacity: {
+                          duration: 0.8,
+                          // delay: index * 0.1,
+                        },
+                        y: {
+                          duration: 2,
+                          repeat: Infinity,
+                          repeatType: "reverse",
+                          ease: "easeInOut",
+                        },
+                        rotateX: {
+                          type: "spring",
+                          damping: 20,
+                          stiffness: 100,
+                          duration: 0.8,
+                          delay: index * 0.1,
+                        },
+                        rotateY: {
+                          type: "spring",
+                          damping: 20,
+                          stiffness: 100,
+                          duration: 0.8,
+                          delay: index * 0.1,
+                        },
+                      },
+                    }}
+                    // Controls how the whileInView animation triggers
+                    viewport={{
+                      once: false, // Animation will trigger every time it enters viewport
+                      amount: 0.7, // Triggers when 50% of component is visible
+                    }}
+                  >
+                    <ProjectWebCard content={data} />
+                  </motion.div>
+                </div>
+                <motion.div
+                  className="card-carousel-projects-description"
+                  ref={itemRef}
+                  // Regular CSS class
+                  // Unique key for React list rendering
+                  key={data.id}
+                  // Starting state when component mounts
+
+                  initial={{
+                    opacity: 0, // Starts partially transparent
+                    y: 16, // Shifted 16px down
+                    // rotateX: 12, // Tilted backward 12 degrees
+
+                    // rotateZ:10,
+                  }}
+                  // Animation that triggers when component comes into view
+                  whileInView={{
+                    opacity: 1, // Becomes fully visible
+                    y: 0, // Moves to original vertical position
+
+                    // rotateZ:10,
+                    transition: {
+                      // duration: 2, // Takes 0.5 seconds to animate
+                      type: "spring",
+                      damping: 20,
+                      stiffness: 100,
+                      duration: 0.8,
+                      delay: index * 0.1, // Stagger effect
+                    },
+                  }}
+                  // Controls how the whileInView animation triggers
+                  viewport={{
+                    once: false, // Animation will trigger every time it enters viewport
+                    amount: 0.7, // Triggers when 50% of component is visible
+                  }}
+                  onViewportEnter={() => updateBackground(data.id)}
+                >
+                  <ProjectWebCardText content={data} />
+                </motion.div>
+              </div>
             ))}
           </motion.div>
         </div>

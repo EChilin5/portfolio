@@ -43,7 +43,7 @@ const HomePage = () => {
           </div>
         </div>
 
-        <div className="home-bottom-btn">
+        {/* <div className="home-bottom-btn">
           <div className="social-groups">
             <div
               className="social-groups-item"
@@ -64,7 +64,7 @@ const HomePage = () => {
               GitHub
             </div>
           </div>
-          </div>
+          </div> */}
 
         {/* <div className="home-bottom">
           <div className="social-groups">

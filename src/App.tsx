@@ -57,10 +57,10 @@ function App() {
         </div>
         <div>
           <ProjectPage />
-        </div>
+        </div> 
         {/* </motion.div> */}
-      </div>
-      <div
+      </div> 
+       {/* <div
         style={{
           position: "relative",
           height: "510px",
@@ -80,12 +80,12 @@ function App() {
               position: "sticky",
               top: "calc(90vh - 510px)",
             }}
-          >
+          >  */}
             <Footer />
           </div>
-        </div>
-      </div>
-    </div>
+    //      </div>
+    //   </div>
+    //  </div>
   );
 }
 

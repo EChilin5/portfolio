@@ -148,3 +148,157 @@
     bottom: -85%;
     font-size: 32px;
 }
+
+
+@media screen and (min-width:250px) {   
+    .home-wrapper {
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .home-header{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        z-index: 4;
+        margin-top: 150%;
+
+        &-title {
+            font-size: 20px;
+            font-weight: 900;
+            font-family: "Margarine", sans-serif;
+            img{
+                display: none;
+            }
+        }
+        &-sub {
+            font-size: 16px;
+            text-align: right;
+            font-weight: 700;
+            font-family: "Margarine", sans-serif;
+            img{display: none;}
+    
+        }
+    }
+    .home-images {
+        position: relative;
+        width:100%;
+
+        &-location{
+            position:relative;
+            top:15%;
+            
+            .oultine-img{
+                position: absolute;
+                width: 80%;
+            }
+
+            .full-img {
+                position: absolute;
+                width: 80%;
+            }
+        }
+    }
+
+    .home-bottom-btn{
+        display: flex;
+        flex-direction: column;
+    }
+    
+}
+
+@media screen and (min-width:834px) {   
+    .home-wrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        position: relative;
+        top: 27%;
+    }
+  
+.home-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 6%;
+    margin-top: 39%;
+
+
+    &-title {
+        font-size: 50px;
+        font-weight: 900;
+        font-family: "Margarine", sans-serif;
+
+    }
+
+    &-sub {
+        font-size:30px;
+        text-align: right;
+        font-weight: 700;
+        font-family: "Margarine", sans-serif;
+
+    }
+}
+    .home-images {
+        position: relative;
+        width: 40%;
+
+        &-location{
+            position:relative;
+            top:15%;
+            
+            .oultine-img{
+                position: absolute;
+                width: 80%;
+            }
+
+            .full-img {
+                position: absolute;
+                width: 80%;
+            }
+        }
+    }
+
+    .home-bottom-btn{
+        display: flex;
+        flex-direction: column;
+    }
+    
+}
+
+
+@media  screen and (min-width: 1280px) {
+    .home-header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 6%;
+        margin-top: 10%;
+    
+    
+        &-title {
+            font-size:128px;
+            font-weight: 900;
+            font-family: "Margarine", sans-serif;
+    
+        }
+    
+        &-sub {
+            font-size:80px;
+            text-align: right;
+            font-weight: 700;
+            font-family: "Margarine", sans-serif;
+    
+        }
+    }
+}

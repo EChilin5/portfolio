@@ -42,42 +42,42 @@ function App() {
     <div className="App">
       <div className="home-hero-display">
         <div className="home-hero-display-main">
-          <HomePage/>
+          <HomePage />
         </div>
         <div className="home-hero-display-sub">
-          <SlideablePage/>
+          <SlideablePage />
         </div>
       </div>
       <div className="app-main" ref={container}>
         {/* <motion.div style={{ y }} className="app-container"> */}
-          <div>
-            <About />
-          </div>
-          <div>
-            <ProjectPage />
-          </div>
+        <div>
+          <About />
+        </div>
+        <div>
+          <ProjectPage />
+        </div>
         {/* </motion.div> */}
       </div>
       <div
-        // style={{
-        //   position: "relative",
-        //   height: "510px",
-        //   clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)",
-        // }}
+        style={{
+          position: "relative",
+          height: "510px",
+          clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)",
+        }}
       >
         <div
-          // style={{
-          //   position: "relative",
-          //   height: "calc(90vh + 510px)",
-          //   top: "-100vh",
-          // }}
+          style={{
+            position: "relative",
+            height: "calc(90vh + 510px)",
+            top: "-100vh",
+          }}
         >
           <div
-            // style={{
-            //   height: "510px",
-            //   position: "sticky",
-            //   top: "calc(90vh - 510px)",
-            // }}
+            style={{
+              height: "510px",
+              position: "sticky",
+              top: "calc(90vh - 510px)",
+            }}
           >
             <Footer />
           </div>

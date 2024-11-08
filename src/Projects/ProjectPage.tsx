@@ -2,6 +2,8 @@ import React, { useEffect, useRef, useState } from "react";
 import chill from "../image/ChillCalories.png";
 import zotes from "../image/zotes.png";
 import duck from "../image/duck.png";
+import tio from "../image/tio.png";
+
 import globalmetal from "../image/GlobalMetalVentures.png";
 import ProjectTemplate from "./ProjectTemplate";
 import "./ProjectPage.scss";
@@ -21,7 +23,7 @@ const ProjectPage = () => {
       name: "TXT Labs",
       techStack: "Reat JS with TypeScript | Sass",
       description:
-        "Collborated with fellow teammates in a website redevelopment: Our focus was on integrating advanced animations to highlight our latest web development capabilities for prospective clients.For example using framer motion to create unique animations appealing to users to demonstrate the high level of website we create for our clients",
+        "Collaborated closely with a team to revamp our website, focusing on integrating cutting-edge animations using Framer Motion. We crafted visually dynamic experiences that captivate users and showcase our advanced web development skills. These unique, user-centered animations highlight our commitment to creating high-quality, engaging websites that set our clients apart in a competitive digital landscape",
       delvirable: "Just Testing the current deliverable 1 section",
       delivirable2:
         " Increased Client Interest: The project showcased our technical capabilities, attracting interest from prospective clients seeking top-tier website functionality and design.",
@@ -34,7 +36,7 @@ const ProjectPage = () => {
       name: "Global Metal Ventures",
       techStack: "React Js",
       description:
-        "Client requested to improve there overall website based on their design in order to improve better design. Additionally incorporate the EMAIL JS API for customers to contact client directly.",
+        "Revamped the client’s website to elevate its design and user experience, aligning closely with their vision for a modern, cohesive look. Integrated the EMAIL JS API to enable seamless direct customer contact, enhancing accessibility and engagement.",
       delvirable: `Revitalized Design: Re-envisioned the website layout to reflect
                 a polished, professional look aligned with the client’s vision,
                 enhancing ease of navigation and user engagement.`,
@@ -50,7 +52,7 @@ const ProjectPage = () => {
       name: "Chill Calories",
       techStack: "Kotlin, Firebase",
       description:
-        "An android application built with Kotlin in order to help user to improve their eating habbits. The app will show users a list of food they have ate in the past, healthy restaurants, and recipes. Additionally the app will be providing the user with the amount of calories they have consumed and how many they have left. This way the user can be more cautious of what they eat.",
+        "Developed an Android app in Kotlin designed to empower users in building healthier eating habits. The app tracks food history, suggests nutritious restaurants and recipes, and provides real-time calorie insights, helping users make mindful dietary choices and stay on track with their wellness goals.",
       delvirable: "Just Testing the current deliverable 1 section",
       delivirable2: " Just testing devliverable 2",
       git: "https://github.com/EChilin5/iTV",
@@ -59,10 +61,10 @@ const ProjectPage = () => {
     },
     {
       id: 3,
-      name: "Zotes",
-      techStack: "Kotlin, Firebase, React Js",
+      name: "TIO CR",
+      techStack: "Kotlin, Firebase",
       description:
-        "Zote Shop is an web application intended to help users buy different products. A demo application to demonstrate how products will be presented and what infromation will be available to the user.",
+        "Zote Shop, a powerful demo web application crafted to showcase an engaging, user-friendly shopping experience. With sleek product presentation and streamlined information access, Zote Shop sets the stage for a compelling e-commerce solution ready to elevate online retail.",
       delvirable: "Just Testing the current deliverable 1 section",
       delivirable2: " Just testing devliverable 2",
       git: "https://github.com/EChilin5/Commerce",
@@ -71,15 +73,15 @@ const ProjectPage = () => {
     },
     {
       id: 4,
-      name: "Chill Calories",
+      name: "Tio CR",
       techStack: "Kotlin, Firebase",
       description:
-        "An android application built with Kotlin in order to help user to improve their eating habbits. The app will show users a list of food they have ate in the past, healthy restaurants, and recipes. Additionally the app will be providing the user with the amount of calories they have consumed and how many they have left. This way the user can be more cautious of what they eat.",
+        "Presenting Tio CR, an innovative Android app powered by Google ML, enabling users to capture and convert text from any document, book, or poster instantly. Tio CR transforms photos into editable, savable notes, with the added feature of text-to-speech, allowing users to listen to their saved content—bringing unparalleled convenience and accessibility to everyday tasks.",
       delvirable: "Just Testing the current deliverable 1 section",
       delivirable2: " Just testing devliverable 2",
-      git: "https://github.com/EChilin5/iTV",
-      liv: "https://play.google.com/store/apps/details?id=eachillz.dev.itv&hl=en",
-      image: `${chill}`,
+      git: "",
+      liv: "https://play.google.com/store/apps/details?id=com.eachilin.imagecut",
+      image: `${tio}`,
     },
   ];
 
@@ -123,24 +125,22 @@ const ProjectPage = () => {
 
   return (
     <div>
-      <div id="project" className="project-container">
+      <div
+        id="project"
+        className="project-container"
+        style={{ backgroundColor: overallState }}
+      >
         <div className="project-title">Projects</div>
-        <div className="project-sub-title">
-          {" "}
-          personalized service, expert repairs, quality products, and a
-          community-driven experience
-        </div>
+        <div className="project-sub-title"> web and android based projects</div>
         <div
           ref={container}
           className="web-project-main-container"
-          style={{ backgroundColor: overallState }}
+          // style={{ backgroundColor: overallState }}
         >
-          <motion.div
-            style={{ y }}
-            className="web-project-container"
-          >
+          <motion.div style={{ y }} className="web-project-container">
             {projects.map((data, index) => (
-              <div className="card-carousel-projects">
+              // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
+              <div key={index} className="card-carousel-projects">
                 <div>
                   <motion.div
                     // Attaches a ref for DOM manipulation
@@ -169,7 +169,7 @@ const ProjectPage = () => {
                         },
                         y: {
                           duration: 2,
-                          repeat: Infinity,
+                          repeat: Number.POSITIVE_INFINITY,
                           repeatType: "reverse",
                           ease: "easeInOut",
                         },

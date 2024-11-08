@@ -28,6 +28,9 @@
 
 .web-right {
     color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 
@@ -53,4 +56,14 @@
         color: white;
 
     }
+}
+
+.card-title {
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.card-description {
+    font-size: 20px;
+
 }

@@ -57,7 +57,7 @@ function Word(props: WordProps) {
 
 function HomeTitleComponents() {
   const paragraph1 =
-    `Create innovative solutions with Android (Kotlin, Firebase) and web development (React JS, C#, SQL), from mentoring teams to leading QA for generative AI tools. Let's connect to bring a collaborative, results-driven approach to your next project.`;
+    "Hi I'm Chilin, a software developer driven to create impactful websites and apps that solve real problems. I enjoy tackling challenges, especially with unique animations, to bring projects to life. If you have a vision, let’s collaborate to build something meaningful and memorable!";
   const element = useRef(null);
   const { scrollYProgress } = useScroll({
     target: element,

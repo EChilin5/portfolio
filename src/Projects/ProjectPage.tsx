@@ -116,7 +116,7 @@ const ProjectPage = () => {
   );
 
   const updateBackground = (id: number) => {
-    const color = ["black", "red", "teal", "green", "lightblue", "orange"];
+    const color = ["black", "darkred", "teal", "green", "orange", "orange"];
     console.log(color[id + 1]);
     setOverallState(color[id]);
 

@@ -54,7 +54,7 @@ const Footer = () => {
         </div>
         <div className="footer-outreach">
           <a className="footer-call" href="tel:323-807-4832">
-            323-807-****
+            323-807-4832
           </a>
         </div>
       </div>
@@ -64,10 +64,10 @@ const Footer = () => {
             <div>Version</div>
             <div>2024 &copy; Edition</div>
           </div>
-          <div>
+          {/* <div>
             <div>Local Time</div>
             <div>{laTime} PST</div>
-          </div>
+          </div> */}
         </div>
         <div className="connections">
           <div>Connect</div>

@@ -42,6 +42,30 @@ const HomePage = () => {
             </div>
           </div>
         </div>
+
+        <div className="home-bottom-btn">
+          <div className="social-groups">
+            <div
+              className="social-groups-item"
+              onClick={() => openLink(linkedin)}
+            >
+              Linkedin
+            </div>
+            <div
+              className="social-groups-item"
+              onClick={() => openLink(resume)}
+            >
+              Resume
+            </div>
+            <div
+              className="social-groups-item"
+              onClick={() => openLink(Github)}
+            >
+              GitHub
+            </div>
+          </div>
+          </div>
+
         {/* <div className="home-bottom">
           <div className="social-groups">
             <div
@@ -68,10 +92,10 @@ const HomePage = () => {
             applications.Currently based in Los Angeles.
           </div>
         </div> */}
-        <div className="tech-Stack">
+        {/* <div className="tech-Stack">
           <div>Tech Stack</div>
           <div>React, Java, HTML, JavaScript, C#, Python, .NET</div>
-        </div>
+        </div> */}
       </div>
       {/* <div className="home-image"><img src={edgar2} alt="edgar2"/></div> */}
     </div>

@@ -44,6 +44,8 @@ function App() {
         <div className="home-hero-display-main">
           <HomePage />
         </div>
+        <div className="home-hero-display-mid">
+        </div>
         <div className="home-hero-display-sub">
           <SlideablePage />
         </div>

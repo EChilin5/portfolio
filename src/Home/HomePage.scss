@@ -3,6 +3,7 @@
 .home-main {
     width: 100%;
     height: 100vh;
+    overflow: hidden;
 
 }
 
@@ -14,8 +15,8 @@
     color: white;
     pointer-events: none;
     // position: absolute;
-    background-color: #000000;
-    opacity: 80%;
+    background-color: transparent;
+   // opacity: 80%;
     z-index: 3;
 }
 
@@ -45,7 +46,7 @@
     justify-content: center;
     gap: 10px;
     position: relative;
-    top: 20%;
+    top: 27%;
 }
 
 .home-main-header {
@@ -62,6 +63,7 @@
     position: absolute;
     top: 34%;
     left: 6%;
+    margin-top: 8%;
 
 
     &-title {
@@ -98,12 +100,13 @@
     }
 }
 
-.home-bottom {
+.home-bottom-btn {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     position: relative;
-    bottom: -400px;
+    top:5%;
+    right: -60%;
     margin-left: 150px;
     margin-right: 150px;
 

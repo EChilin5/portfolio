@@ -18,6 +18,10 @@ interface ProjectData {
 }
 
 const ProjectWebCardText = (props: ProjectData) => {
+  const openEmail = (web: string) => {
+    window.open(web);
+  };
+
   const { content } = props;
 
   return (
@@ -28,9 +32,24 @@ const ProjectWebCardText = (props: ProjectData) => {
 
         <div className="web-btn">
           {/* biome-ignore lint/a11y/useButtonType: <explanation> */}
-          <button>Live Link &#8594;</button>
+          {content.liv !== "" ? (
+            // biome-ignore lint/a11y/useButtonType: <explanation>
+            <button onClick={() => openEmail(content.liv)}>
+              Live Link &#8594;
+            </button>
+          ) : (
+            ""
+          )}
+
           {/* biome-ignore lint/a11y/useButtonType: <explanation> */}
-          <button>Github &#8594;</button>
+          {content.git !== "" ? (
+            // biome-ignore lint/a11y/useButtonType: <explanation>
+            <button onClick={() => openEmail(content.git)}>
+              Github &#8594;
+            </button>
+          ) : (
+            ""
+          )}
         </div>
       </div>
     </div>

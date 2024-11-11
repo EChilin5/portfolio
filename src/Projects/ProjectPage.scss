@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Margarine&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 .project-container {
     background-color: #000;
     padding: 20px;
@@ -9,6 +11,7 @@
     text-align: center;
     font-size: 50px;
     color: white;
+    font-family: Montserrat;
 }
 
 .project-sub-title {
@@ -18,6 +21,8 @@
     margin-bottom: 20px;
     color: white;
     z-index: 3;
+    font-family: Montserrat;
+
 }
 
 .app-project-container {
@@ -102,7 +107,7 @@
     }
 }
 
-@media screen and (min-width: 390px) {
+@media screen and (min-width: 250px) {
     .card-carousel-projects {
         // border: 4px solid white;
         display: flex;
@@ -110,14 +115,14 @@
         align-items: center;
         justify-content: center;
         gap: 20px;
-    
+
         &-description {
             // width: 55%;
         }
     }
 
     .web-project-main-container {
-        height: 380vh;
+        height: 520vh;
     }
 
     .web-project-container {
@@ -127,14 +132,14 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 10px;
+        gap: 20px;
         position: relative;
-    
+
         &:nth-of-type(1) {
-            top: 10%;
+            top: 20%;
         }
-    
-     
+
+
     }
 }
 
@@ -147,14 +152,14 @@
         align-items: center;
         justify-content: center;
         gap: 20px;
-    
+
         &-description {
             // width: 55%;
         }
     }
 
     .web-project-main-container {
-        height: 380vh;
+        height: 640vh;
     }
 
     .web-project-container {
@@ -164,16 +169,89 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 10px;
+        gap: 30px;
         position: relative;
-    
+
         &:nth-of-type(1) {
-            top: -5%;
+            top: 30%;
         }
-    
-     
+
+
     }
 }
+
+@media screen and (min-width: 500px) {
+    .card-carousel-projects {
+        // border: 4px solid white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+
+        &-description {
+            // width: 55%;
+        }
+    }
+
+    .web-project-main-container {
+        height: 550vh;
+    }
+
+    .web-project-container {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        position: relative;
+
+        &:nth-of-type(1) {
+            top: 18%;
+        }
+
+
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .card-carousel-projects {
+        // border: 4px solid white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+
+        &-description {
+            // width: 55%;
+        }
+    }
+
+    .web-project-main-container {
+        height: 490vh;
+    }
+
+    .web-project-container {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        position: relative;
+
+        &:nth-of-type(1) {
+            top: 18%;
+        }
+
+
+    }
+}
+
 
 @media screen and (min-width: 834px) {
     .web-project-container {
@@ -185,13 +263,14 @@
         justify-content: center;
         gap: 10px;
         position: relative;
-    
+
         &:nth-of-type(1) {
-            top: -12%;
+            top: 12%;
         }
-    
-     
+
+
     }
+
     .card-carousel-projects {
         // border: 4px solid white;
         display: flex;
@@ -199,12 +278,86 @@
         align-items: center;
         justify-content: center;
         gap: 20px;
-    
+
         &-description {
-             width: 50%;
+            width: 50%;
         }
     }
+
     .web-project-main-container {
-        height: 260vh;
+        height: 380vh;
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .web-project-container {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        position: relative;
+
+        &:nth-of-type(1) {
+            top: -2%;
+        }
+
+
+    }
+
+    .card-carousel-projects {
+        // border: 4px solid white;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+
+        &-description {
+            width: 50%;
+        }
+    }
+
+    .web-project-main-container {
+        height: 300vh;
+    }
+}
+
+@media screen and (min-width: 1728px) {
+    .web-project-container {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        position: relative;
+
+        &:nth-of-type(1) {
+            top: -20%;
+        }
+
+
+    }
+
+    .card-carousel-projects {
+        // border: 4px solid white;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+
+        &-description {
+            width: 50%;
+        }
+    }
+
+    .web-project-main-container {
+        height: 240vh;
     }
 }

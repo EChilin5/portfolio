@@ -13,7 +13,7 @@ const Footer = () => {
 
   const linkedin = "https://www.linkedin.com/in/edgar-c/";
   const resume =
-    "https://drive.google.com/file/d/1cFr7-XmffshG0JXaFawLZIUjbvWUqSCm/view?usp=sharing";
+    "https://drive.google.com/file/d/1UWZIaWa1SLQ-pUnSM_IKJpLEdqfYaIT4/view?usp=sharing";
   const Github = "https://github.com/EChilin5";
   const openLink = (url: string) => {
     window.open(url, "_blank", "noreferrer");
@@ -47,14 +47,15 @@ const Footer = () => {
         </div>
         <div className="footer-header-text">Let's work together</div>
       </div>
-      <hr className="footer-hr"></hr>
+      <hr className="footer-hr" />
       <div className="footer-header-sub">
+        {/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
         <div className="footer-outreach" onClick={() => openEmail()}>
           eachilin@gmail.com
         </div>
         <div className="footer-outreach">
           <a className="footer-call" href="tel:323-807-4832">
-            323-807-4832
+            (323)807-4832
           </a>
         </div>
       </div>

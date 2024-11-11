@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Margarine&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
 .web-container {
     display: flex;
     flex-direction: row;
@@ -11,6 +14,8 @@
     // height: 600px;
     margin-right: auto;
     margin-left: auto;
+    font-family: Montserrat;
+
 
 }
 
@@ -31,6 +36,8 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    font-family: Montserrat;
+
 }
 
 
@@ -49,11 +56,15 @@
     align-items: sp;
     justify-content: space-between;
     text-align: left;
+    font-family: Montserrat;
+
 
     button {
         border: none;
         background-color: transparent;
         color: white;
+        font-family: Montserrat;
+
 
     }
 }
@@ -61,23 +72,32 @@
 .card-title {
     font-size: 50px;
     font-weight: 700;
+    font-family: Montserrat;
+
 }
 
 .card-description {
     font-size: 20px;
+    font-family: Montserrat;
+
 
 }
 
-@media screen and (min-width: 390px) {
+.web-btn {
+    font-family: Montserrat;
+
+}
+
+@media screen and (min-width: 250px) {
 
     .card-title {
         font-size: 25px;
         font-weight: 700;
     }
-    
+
     .card-description {
         font-size: 20px;
-    
+
     }
 
     .web-image {
@@ -100,10 +120,35 @@
         font-size: 25px;
         font-weight: 700;
     }
-    
+
     .card-description {
         font-size: 20px;
-    
+
+    }
+
+    .web-image {
+        img {
+            width: 80%;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+    }
+}
+
+@media screen and (min-width: 1000px) {
+
+    .card-title {
+        font-size: 50px;
+        font-weight: 700;
+    }
+
+    .card-description {
+        font-size: 20px;
+
     }
 
     .web-image {
@@ -116,5 +161,9 @@
             padding: 20px;
             border-radius: 10px;
         }
+    }
+
+    .web-btn {
+        font-size: 18px;
     }
 }

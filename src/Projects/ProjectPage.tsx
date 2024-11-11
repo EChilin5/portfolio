@@ -61,14 +61,14 @@ const ProjectPage = () => {
     },
     {
       id: 3,
-      name: "TIO CR",
-      techStack: "Kotlin, Firebase",
+      name: "ZoteShop",
+      techStack: "Web, Kotlin, Firebase",
       description:
         "Zote Shop, a powerful demo web application crafted to showcase an engaging, user-friendly shopping experience. With sleek product presentation and streamlined information access, Zote Shop sets the stage for a compelling e-commerce solution ready to elevate online retail.",
       delvirable: "Just Testing the current deliverable 1 section",
       delivirable2: " Just testing devliverable 2",
       git: "https://github.com/EChilin5/Commerce",
-      liv: "https://play.google.com/store/apps/details?id=eachillz.dev.itv&hl=en",
+      liv: "https://commercezotes.web.app/",
       image: `${zotes}`,
     },
     {
@@ -79,7 +79,7 @@ const ProjectPage = () => {
         "Presenting Tio CR, an innovative Android app powered by Google ML, enabling users to capture and convert text from any document, book, or poster instantly. Tio CR transforms photos into editable, savable notes, with the added feature of text-to-speech, allowing users to listen to their saved content—bringing unparalleled convenience and accessibility to everyday tasks.",
       delvirable: "Just Testing the current deliverable 1 section",
       delivirable2: " Just testing devliverable 2",
-      git: "",
+      git: "https://github.com/EChilin5/ImageCut_OCR",
       liv: "https://play.google.com/store/apps/details?id=com.eachilin.imagecut",
       image: `${tio}`,
     },

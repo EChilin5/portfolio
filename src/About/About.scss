@@ -1,7 +1,5 @@
 .about-main {
     margin: 50px 50px;
-
-
 }
 
 .about-header {
@@ -84,4 +82,17 @@
     }
 
 
+}
+
+@media screen and (min-width: 250px) and (max-width: 389px) {
+    .about-main {
+        margin: 10px 10px;
+    }
+}
+
+
+@media screen and (min-width: 390px) {
+    .about-main {
+        margin: 20px 25px;
+    }
 }

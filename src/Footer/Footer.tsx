@@ -73,18 +73,21 @@ const Footer = () => {
         <div className="connections">
           <div>Connect</div>
           <div className="connections-sub">
+            {/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
             <div
               className="connections-sub-item"
               onClick={() => openLink(linkedin)}
             >
               Linkedin
             </div>
+            {/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
             <div
               className="connections-sub-item"
               onClick={() => openLink(Github)}
             >
               Github
             </div>
+            {/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
             <div
               className="connections-sub-item"
               onClick={() => openLink(resume)}

@@ -1,6 +1,11 @@
 import React, { useRef } from "react";
 import "./HomeMovingText.scss";
-import { useScroll, motion, useTransform, MotionValue } from "framer-motion";
+import {
+  useScroll,
+  motion,
+  useTransform,
+  type MotionValue,
+} from "framer-motion";
 
 interface LetterProps {
   children: string;
@@ -57,7 +62,7 @@ function Word(props: WordProps) {
 
 function HomeTitleComponents() {
   const paragraph1 =
-    "Hi I'm Chilin, a software developer driven to create impactful websites and apps that solve real problems. I enjoy tackling challenges, especially with unique animations, to bring projects to life. If you have a vision, let’s collaborate to build something meaningful and memorable!";
+    "Hi, I'm Chilin a software developer passionate about building impactful websites and apps. I love tackling challenges and bringing projects to life with unique animations. Let's team up to create something memorable!";
   const element = useRef(null);
   const { scrollYProgress } = useScroll({
     target: element,

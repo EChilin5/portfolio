@@ -8,12 +8,7 @@ import css from "../image/CSS.png";
 import csharp from "../image/C#.png";
 import "./About.scss";
 import Magnetic from "../Animation/Magnets";
-import { motion, MotionValue } from "framer-motion";
 import HomeMovingText from "./HomeMovingText";
-
-interface Motion {
-  y: MotionValue<number>;
-}
 
 const About = () => {
   // const {y} = props;
@@ -49,7 +44,7 @@ const About = () => {
     <div className="about-main">
       <div className="about-header">
         <div className="about-container">
-        <HomeMovingText/>
+          <HomeMovingText />
         </div>
       </div>
 

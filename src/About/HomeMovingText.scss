@@ -18,11 +18,12 @@
   align-self: stretch;
   color: black;
   text-align: center;
-   font-family: Montserrat;
+  font-family: Montserrat;
   font-size: 40px;
   font-style: normal;
   font-weight: 700;
-  line-height: 150%; /* 144px */
+  line-height: 150%;
+  /* 144px */
   text-transform: uppercase;
   margin-left: 20px;
   text-align: left;
@@ -32,17 +33,18 @@
   width: 358px;
   color: grey;
   text-align: center;
-   font-family: Montserrat;
+  font-family: Montserrat;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 150%; /* 24px */
+  line-height: 150%;
+  /* 24px */
 }
 
 .home-scroll-text {
   color: black;
   text-align: center;
-   font-family: Montserrat;
+  font-family: Montserrat;
   font-style: normal;
   font-weight: 400;
   display: flex;
@@ -52,7 +54,8 @@
   width: 358px;
   font-size: 16px;
   justify-content: flex-start;
-  line-height: 150%; /* 24px */
+  line-height: 150%;
+  /* 24px */
   margin: 16px 8px;
 }
 
@@ -70,16 +73,17 @@
 @media screen and (min-width: 250px) and (max-width: 389px) {
   .home-title-container {
     display: flex;
-    padding: 210px 0px 210px 0px;
+    padding: 100px 0px 100px 0px;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     gap: 24px;
     align-self: stretch;
   }
 
   .home-title-content-heading {
     font-size: 23px;
-    line-height: 150%; /* 192px */
+    line-height: 150%;
+    /* 192px */
     text-align: center;
     margin-left: 8px;
   }
@@ -98,8 +102,9 @@
     justify-content: left;
 
   }
+
   .word {
-    margin-right: 2px;
+    margin-right: 4px;
 
   }
 }
@@ -117,7 +122,8 @@
 
   .home-title-content-heading {
     font-size: 40px;
-    line-height: 150%; /* 192px */
+    line-height: 150%;
+    /* 192px */
     text-align: center;
     margin-left: 8px;
   }
@@ -136,6 +142,7 @@
     justify-content: center;
 
   }
+
   .word {
     margin-right: 6px;
 
@@ -155,7 +162,8 @@
 
   .home-title-content-heading {
     font-size: 40px;
-    line-height: 150%; /* 192px */
+    line-height: 150%;
+    /* 192px */
     text-align: center;
   }
 
@@ -172,6 +180,7 @@
     justify-content: center;
 
   }
+
   .word {
     margin-right: 6px;
 
@@ -191,7 +200,8 @@
 
   .home-title-content-heading {
     font-size: 64px;
-    line-height: 150%; /* 192px */
+    line-height: 150%;
+    /* 192px */
     text-align: center;
   }
 
@@ -208,6 +218,7 @@
     justify-content: center;
 
   }
+
   .word {
     margin-right: 9px;
 
@@ -228,8 +239,9 @@
   }
 
   .home-title-content-heading {
-  font-size: 96px;
-    line-height: 150%; /* 192px */
+    font-size: 96px;
+    line-height: 150%;
+    /* 192px */
   }
 
   .home-title-content-main {
@@ -241,6 +253,7 @@
     width: 1050px;
     font-size: 32px;
   }
+
   .word {
     margin-right: 10px;
     margin-top: 12px;
@@ -254,7 +267,8 @@
 @media screen and (min-width: 1728px) {
   .home-title-content-heading {
     font-size: 128px;
-    line-height: 150%; /* 192px */
+    line-height: 150%;
+    /* 192px */
   }
 
   .home-title-content-main {

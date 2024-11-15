@@ -23,7 +23,7 @@ const ProjectPage = () => {
       name: "TXT Labs",
       techStack: "Reat JS with TypeScript | Sass",
       description:
-        "Collaborated closely with a team to revamp our website, focusing on integrating cutting-edge animations using Framer Motion. We crafted visually dynamic experiences that captivate users and showcase our advanced web development skills. These unique, user-centered animations highlight our commitment to creating high-quality, engaging websites that set our clients apart in a competitive digital landscape",
+        "Worked with a team to revamp TXT LAB's website, integrating advanced animations with Framer Motion to create visually dynamic, user-focused experiences.",
       delvirable: "Just Testing the current deliverable 1 section",
       delivirable2:
         " Increased Client Interest: The project showcased our technical capabilities, attracting interest from prospective clients seeking top-tier website functionality and design.",
@@ -36,7 +36,7 @@ const ProjectPage = () => {
       name: "Global Metal Ventures",
       techStack: "React Js",
       description:
-        "Revamped the client’s website to elevate its design and user experience, aligning closely with their vision for a modern, cohesive look. Integrated the EMAIL JS API to enable seamless direct customer contact, enhancing accessibility and engagement.",
+        "Redesigned the client’s website for a modern, cohesive look and improved user experience. Integrated EMAIL JS API for seamless direct customer contact, boosting accessibility and engagement",
       delvirable: `Revitalized Design: Re-envisioned the website layout to reflect
                 a polished, professional look aligned with the client’s vision,
                 enhancing ease of navigation and user engagement.`,
@@ -52,7 +52,7 @@ const ProjectPage = () => {
       name: "Chill Calories",
       techStack: "Kotlin, Firebase",
       description:
-        "Developed an Android app in Kotlin designed to empower users in building healthier eating habits. The app tracks food history, suggests nutritious restaurants and recipes, and provides real-time calorie insights, helping users make mindful dietary choices and stay on track with their wellness goals.",
+        "Developed a Kotlin-based Android app to support healthier eating habits, offering food tracking, recipe suggestions, and real-time calorie insights to help users make mindful dietary choices",
       delvirable: "Just Testing the current deliverable 1 section",
       delivirable2: " Just testing devliverable 2",
       git: "https://github.com/EChilin5/iTV",
@@ -64,7 +64,7 @@ const ProjectPage = () => {
       name: "ZoteShop",
       techStack: "Web, Kotlin, Firebase",
       description:
-        "Zote Shop, a powerful demo web application crafted to showcase an engaging, user-friendly shopping experience. With sleek product presentation and streamlined information access, Zote Shop sets the stage for a compelling e-commerce solution ready to elevate online retail.",
+        "Zote Shop is a demo web app designed to deliver an engaging, user-friendly shopping experience. With sleek product displays and easy information access, it offers a compelling e-commerce solution for online retail.",
       delvirable: "Just Testing the current deliverable 1 section",
       delivirable2: " Just testing devliverable 2",
       git: "https://github.com/EChilin5/Commerce",
@@ -76,7 +76,7 @@ const ProjectPage = () => {
       name: "Tio CR",
       techStack: "Kotlin, Firebase",
       description:
-        "Presenting Tio CR, an innovative Android app powered by Google ML, enabling users to capture and convert text from any document, book, or poster instantly. Tio CR transforms photos into editable, savable notes, with the added feature of text-to-speech, allowing users to listen to their saved content—bringing unparalleled convenience and accessibility to everyday tasks.",
+        "Tio CR is an innovative Android app powered by Google ML, letting users instantly capture and convert text from documents, books, or posters. It transforms photos into editable, savable notes with text-to-speech, and accessibility for everyday tasks.",
       delvirable: "Just Testing the current deliverable 1 section",
       delivirable2: " Just testing devliverable 2",
       git: "https://github.com/EChilin5/ImageCut_OCR",

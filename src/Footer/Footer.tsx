@@ -47,7 +47,7 @@ const Footer = () => {
         </div>
         <div className="footer-header-text">Let's work together</div>
       </div>
-      <hr className="footer-hr" />
+      {/* <hr className="footer-hr" /> */}
       <div className="footer-header-sub">
         {/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
         <div className="footer-outreach" onClick={() => openEmail()}>

@@ -19,6 +19,9 @@
     &-text {
         font-size: 80px;
         color: white;
+        border-bottom: 1px solid white;
+        padding-bottom: 10px;
+        width: 100%;
     }
 }
 
@@ -122,6 +125,8 @@
         &-text {
             font-size: 20px;
             color: white;
+            padding: 0px;
+            text-align: center;
         }
     }
 
@@ -351,8 +356,10 @@
         // justify-content: center;
 
         &-text {
-            font-size: 50px;
+            font-size: 45px;
             color: white;
+            // padding-bottom: 10px;
+            text-align: left;
         }
     }
 
